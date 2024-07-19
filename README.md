@@ -29,6 +29,7 @@
 - [AWS Services by Region](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)
 [Back to the top](#table-of-contents)
 
+# AWS IAM Identity & Access Management
 # aws-iam-identity--access-management
 
 | Item          | Description                                                      |
@@ -36,12 +37,18 @@
 | Users         | Mapped to a physical user, has a password for AWS Console        |
 | Groups        | Contains users only                                              |
 | Policies      | JSON document that outlines permissions for users or groups      |
-| Roles         | For EC2 instances or AWS services                                |
-| Security      | MFA(Multi Factor Authentication) + Password Policy                                            |
-| AWS CLI       | (command line interface)Manage your AWS services using the command-line                  |
-| AWS SDK       | (Software Developer Kit) Manage your AWS services using a programming language            |
+| Roles         | Used for EC2 instances or AWS services                            |
+| Security      | MFA(Multi Factor Authentication) + Password Policy               |
 | Access Keys   | Access AWS using the CLI or SDK                                  |
-| Audit         | IAM Credential Reports & IAM Access Advisor                      |
+| Audit         | IAM Credential Reports(**Account level**) & IAM Access Advisor(**user level**)                      |
+
+Access AWS
+| Item                 | Description                                                             |
+|----------------------|-------------------------------------------------------------------------|
+| AWS CLI              | (Command Line Interface) Manage your AWS services using the command line |
+| AWS SDK              | (Software Developer Kit) Manage your AWS services using a programming language |
+| AWS Management Console | Web-based user interface to manage AWS services                       |
+
 
 [Back to the top](#table-of-contents)
 
@@ -71,6 +78,7 @@
 | EFS-IA                                                     | Cost-optimized storage class for infrequently accessed files       |
 | FSx for Windows                                            | Network File System for Windows servers                            |
 | FSx for Lustre                                             | High Performance Computing Linux file system                       |
+
 [Back to the top](#table-of-contents)
 
 | EC2 Instances Purchasing Options                          | Description                                                                                                    | Example                                                                                         |
