@@ -42,7 +42,7 @@
 | Access Keys   | Access AWS using the CLI or SDK                                  |
 | Audit         | IAM Credential Reports(**Account level**) & IAM Access Advisor(**user level**)                      |
 
-Access AWS
+### Access AWS
 | Item                 | Description                                                             |
 |----------------------|-------------------------------------------------------------------------|
 | AWS CLI              | (Command Line Interface) Manage your AWS services using the command line |
@@ -58,23 +58,24 @@ Access AWS
 | EC2 Instance                                               | AMI (OS) + Instance Size (CPU + RAM) + Storage + Security Groups + EC2 User Data |
 | Security Groups                                            | Firewall attached to the EC2 instance                              |
 | EC2 User Data                                              | Script launched at the first start of an instance                  |
-| SSH                                                        | Start a terminal into our EC2 Instances (port 22)                  |
 | EC2 Instance Role                                          | Link to IAM roles                                                  |
 | Purchasing Options                                         | On-Demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance |
 
+### Communicate with EC2
+| SSH                                                        | Start a terminal into our EC2 Instances (port 22)                  |  
+| EC2 Instance connect                                       | Connect to your EC2 instance within your browser                   |
 
-
-
+### EC2 Instance Storage – Summary  
 | EC2 Instance Storage – Summary                             | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
-| EBS volumes                                                | Network drives attached to one EC2 instance at a time              |
+| EBS volumes  EBS (Elastic Block Store)                     | Network drives attached to one EC2 instance at a time              |
 |                                                            | Mapped to an Availability Zone                                     |
 |                                                            | Can use EBS Snapshots for backups / transferring EBS volumes across AZ |
-| AMI                                                        | Create ready-to-use EC2 instances with our customizations          |
+| AMI(Amazon machine image)                                  | Create ready-to-use EC2 instances with our customizations          |
 | EC2 Image Builder                                          | Automatically build, test, and distribute AMIs                     |
 | EC2 Instance Store                                         | High-performance hardware disk attached to our EC2 instance        |
 |                                                            | Lost if our instance is stopped / terminated                       |
-| EFS                                                        | Network file system, can be attached to 100s of instances in a region |
+| EFS(Elastic File System)                                   |Manage NFS(Network file system), can be attached to 100s of instances in a region |
 | EFS-IA                                                     | Cost-optimized storage class for infrequently accessed files       |
 | FSx for Windows                                            | Network File System for Windows servers                            |
 | FSx for Lustre                                             | High Performance Computing Linux file system                       |
@@ -114,13 +115,35 @@ Access AWS
 
 # elastic-load-balancing--auto-scaling-group
 ### Elastic Load Balancing & Auto Scaling Groups Section
+| Scaling Type         | Description                                                      |
+|----------------------|------------------------------------------------------------------|
+| **Vertical Scaling** | Increase instance size (= scale up / down)                       |
+|                      | • From: t2.nano - 0.5G of RAM, 1 vCPU                            |
+| **Horizontal Scaling**| Increase number of instances (= scale out / in)                  |
+|                      | • Auto Scaling Group                                             |
+|                      | • Load Balancer                                                  |
+| **High Availability**| Run instances for the same application across multi AZ           |
+|                      | • Auto Scaling Group multi AZ                                    |
+|                      | • Load Balancer multi AZ                                         |
+
+### Scalability, Elasticity 
+| Concept              | Description                                                                                      |
+|----------------------|--------------------------------------------------------------------------------------------------|
+| **Scalability**      | Ability to accommodate a larger load by making the hardware stronger (scale up), or by adding nodes (scale out).|
+|                      | • Increase instance size (scale up).                                                             |
+|                      | • Increase number of instances (scale out).                                                      |
+| **Elasticity**       | Once a system is scalable, elasticity means that there will be some “auto-scaling” so that the system can scale based on the load.|
+|                      | • This is “cloud-friendly”: pay-per-use, match demand, optimize costs.                           |
+
+
+
 | ELB & ASG – Summary                                        | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
 | High Availability vs Scalability                           | Vertical and horizontal scalability, Elasticity, and Agility in the Cloud |
-| Elastic Load Balancers (ELB)                               | Distribute traffic across backend EC2 instances, can be Multi-AZ |
+| ***Elastic Load Balancers(ELB)***                          | Distribute traffic across backend EC2 instances, can be Multi-AZ |
 |                                                            | Supports health checks                                             |
 |                                                            | 4 types: Classic (old), Application (HTTP – L7), Network (TCP – L4), Gateway (L3) |
-| Auto Scaling Groups (ASG)                                  | Implement Elasticity for your application, across multiple AZ |
+| ***Auto Scaling Groups(ASG)***                             | Implement Elasticity for your application, across multiple AZ |
 |                                                            | Scale EC2 instances based on the demand on your system, replace unhealthy instances |
 |                                                            | Integrated with the ELB                                            |
 
