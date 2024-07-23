@@ -62,8 +62,10 @@
 | Purchasing Options                                         | On-Demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance |
 
 ### Communicate with EC2
-| SSH                                                        | Start a terminal into our EC2 Instances (port 22)                  |  
-| EC2 Instance connect                                       | Connect to your EC2 instance within your browser                   |
+| SSH                      | Start a terminal into our EC2 Instances (port 22)    |
+|--------------------------|------------------------------------------------------|
+| EC2 Instance connect     | Connect to your EC2 instance within your browser     |
+
 
 ### EC2 Instance Storage – Summary  
 | EC2 Instance Storage – Summary                             | Description                                                        |
