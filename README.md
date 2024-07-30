@@ -8,7 +8,7 @@
 5. [Elastic Load Balancing & Auto Scaling Group](#elastic-load-balancing--auto-scaling-group)
 6. [Amazon S3](#amazon-s3)
 7. [Databases & Analytics](#databases--analytics)
-8. [Other Compute Services](#other-compute-services)
+8. [Other Compute Services, Lambda](#other-compute-services)
 9. [Deploying & Managing Infrastructure at Scale](#deploying--managing-infrastructure-at-scale)
 10. [Global Infrastructure](#global-infrastructure)
 11. [Cloud Integration](#cloud-integration)
@@ -62,9 +62,11 @@
 | Purchasing Options                                         | On-Demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance |
 
 ### Communicate with EC2
-| SSH                      | Start a terminal into our EC2 Instances (port 22)    |
-|--------------------------|------------------------------------------------------|
-| EC2 Instance connect     | Connect to your EC2 instance within your browser     |
+| Method                  | Description                                           |
+|-------------------------|-------------------------------------------------------|
+| SSH                     | Start a terminal into our EC2 Instances (port 22)     |
+| EC2 Instance connect    | Connect to your EC2 instance within your browser      |
+
 
 
 ### EC2 Instance Storage – Summary  
@@ -163,3 +165,51 @@
 | OpsHub                                                    | Desktop application to manage Snow Family devices                           |
 | Storage Gateway                                           | Hybrid solution to extend on-premises storage to S3                         |
 
+[Back to the top](#table-of-contents)
+
+# databases--analytics
+### Databases & Analytics Summary in AWS
+| **Category**                     | **Service**                                                                                   |
+|----------------------------------|-----------------------------------------------------------------------------------------------|
+| Relational Databases - OLTP      | RDS & Aurora (SQL)                                                                            |
+| Differences                      | Multi-AZ, Read Replicas, Multi-Region                                                         |
+| In-memory Database               | ElastiCache                                                                                   |
+| Key/Value Database               | DynamoDB (serverless) & DAX (cache for DynamoDB)                                              |
+| Warehouse - OLAP                 | Redshift (SQL)                                                                                |
+| Hadoop Cluster                   | EMR                                                                                           |
+| Athena                           | Query data on Amazon S3 (serverless & SQL)                                                    |
+| QuickSight                       | Dashboards on your data (serverless)                                                          |
+| DocumentDB                       | “Aurora for MongoDB” (JSON – NoSQL database)                                                  |
+| Amazon QLDB                      | Financial Transactions Ledger (immutable journal, cryptographically verifiable)               |
+| Amazon Managed Blockchain        | Managed Hyperledger Fabric & Ethereum blockchains                                             |
+| Glue                             | Managed ETL (Extract Transform Load) and Data Catalog service                                 |
+| Database Migration               | DMS                                                                                           |
+| Neptune                          | Graph database                                                                                |
+| Timestream                       | Time-series database                                                                          |
+
+[Back to the top](#table-of-contents)
+
+# Other Compute Services, Lambda
+### other-compute-services
+ ### Other Compute
+| **Feature**                | **Details**                                                      |
+|----------------------------|------------------------------------------------------------------|
+| Docker                     | Container technology to run applications                         |
+| ECS                        | Run Docker containers on EC2 instances                           |
+| Fargate                    | Run Docker containers without provisioning the infrastructure     |
+|                            | Serverless offering (no EC2 instances)                           |
+| ECR                        | Private Docker Images Repository                                 |
+| Batch                      | Run batch jobs on AWS across managed EC2 instances               |
+| Lightsail                  | Predictable & low pricing for simple application & DB stacks     |
+
+### Lambda 
+| **Feature**                        | **Details**                                               |
+|------------------------------------|-----------------------------------------------------------|
+| Lambda                             | Serverless, Function as a Service, seamless scaling, reactive |
+| Lambda Billing                     | By the time run x by the RAM provisioned                  |
+|                                    | By the number of invocations                              |
+| Language Support                   | Many programming languages except (arbitrary) Docker      |
+| Invocation Time                    | Up to 15 minutes                                          |
+| Use Cases                          | Create Thumbnails for images uploaded onto S3             |
+|                                    | Run a Serverless cron job                                 |
+| API Gateway                        | Expose Lambda functions as HTTP API                       |
