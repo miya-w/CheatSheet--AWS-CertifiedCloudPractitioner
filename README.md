@@ -2,7 +2,7 @@
 
 # table-of-contents
 1. [Cloud Computing](#cloud-computing)
-2. [AWS IAM Identity & Access Management](#aws-iam-identity--access-management)
+2. [AWS IAM Identity & Access Management](#aws-iam-identity-access-management)
 3. [Amazon EC2](#amazon-ec2)
 4. [Amazon EC2 Instance Storage](#amazon-ec2-instance-storage)
 5. [Elastic Load Balancing & Auto Scaling Group](#elastic-load-balancing--auto-scaling-group)
@@ -30,7 +30,7 @@
 [Back to the top](#table-of-contents)
 
 # AWS IAM Identity & Access Management
-# aws-iam-identity--access-management
+### aws-iam-identity--access-management
 
 | Item          | Description                                                      |
 |---------------|------------------------------------------------------------------|
@@ -46,13 +46,13 @@
 | Item                 | Description                                                             |
 |----------------------|-------------------------------------------------------------------------|
 | AWS CLI              | (Command Line Interface) Manage your AWS services using the command line |
-| AWS SDK              | (Software Developer Kit) Manage your AWS services using a programming language |
+| AWS SDK              | (Software Developer Kit) Manage your AWS services using a programming language(ex. python) |
 | AWS Management Console | Web-based user interface to manage AWS services                       |
 
 
 [Back to the top](#table-of-contents)
-
-# amazon-ec2
+# EC2
+### amazon-ec2
 | EC2 Section – Summary                                      | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
 | EC2 Instance                                               | AMI (OS) + Instance Size (CPU + RAM) + Storage + Security Groups + EC2 User Data |
@@ -116,9 +116,9 @@
 | Capacity Reservations                                      | Reserve capacity in a specific AZ for any duration                                                             | You book a room for a period with full price even if you don’t stay in it                       |
 
 
+# Elastic Load Balancing & Auto Scaling Groups Section
+#### elastic-load-balancing-auto-scaling-group
 
-# elastic-load-balancing--auto-scaling-group
-### Elastic Load Balancing & Auto Scaling Groups Section
 | Scaling Type         | Description                                                      |
 |----------------------|------------------------------------------------------------------|
 | **Vertical Scaling** | Increase instance size (= scale up / down)                       |
@@ -153,6 +153,8 @@
 
 [Back to the top](#table-of-contents)
 
+# S3
+### amazon-s3
 | Amazon S3 – Summary                                       | Description                                                                 |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------|
 | Buckets vs Objects                                        | Global unique name, tied to a region                                        |
@@ -164,6 +166,21 @@
 | Snow Family                                               | Import data onto S3 through a physical device, edge computing               |
 | OpsHub                                                    | Desktop application to manage Snow Family devices                           |
 | Storage Gateway                                           | Hybrid solution to extend on-premises storage to S3                         |
+
+## Performance across the S3 storage classes
+| Feature                          | S3 Standard          | S3 Intelligent-Tiering*      | S3 Express One Zone** | S3 Standard-IA                  | S3 One Zone-IA**           | S3 Glacier Instant Retrieval     | S3 Glacier Flexible Retrieval*** | S3 Glacier Deep Archive***       |
+|----------------------------------|----------------------|------------------------------|-----------------------|----------------------------------|----------------------------|----------------------------------|----------------------------------|----------------------------------|
+| **Use cases**                    | General purpose storage for frequently accessed data | Automatic cost savings for data with unknown or changing access patterns | High performance storage for your most frequently accessed data | Infrequently accessed data that needs millisecond access | Re-creatable infrequently accessed data | Long-lived data that is accessed a few times per year with instant retrievals | Backup and archive data that is rarely accessed and low cost | Archive data that is very rarely accessed and very low cost |
+| **First byte latency**           | milliseconds         | milliseconds                  | single-digit milliseconds | milliseconds                    | milliseconds               | milliseconds                    | minutes or hours                 | hours                            |
+| **Durability**                   | 99.999999999% (11 nines) | 99.999999999% (11 nines)     | 99.999999999% (11 nines) | 99.999999999% (11 nines)        | 99.999999999% (11 nines)   | 99.999999999% (11 nines)        | 99.999999999% (11 nines)        | 99.999999999% (11 nines)        |
+| **Designed for availability**    | 99.99%               | 99.9%                         | 99.95%                  | 99.9%                           | 99.5%                      | 99.9%                           | 99.99%                          | 99.99%                          |
+| **Availability SLA**             | 99.9%                | 99%                           | 99.9%                   | 99%                             | 99%                        | 99%                             | 99.9%                            | 99.9%                            |
+| **Availability Zones**           | ≥3                   | ≥3                            | 1                        | ≥3                              | 1                          | ≥3                              | ≥3                              | ≥3                               |
+| **Minimum storage duration charge** | N/A               | N/A                           | 1 hour                   | 30 days                         | 30 days                    | 90 days                         | 90 days                         | 180 days                        |
+| **Retrieval charge**             | N/A                  | N/A                           | N/A                      | per GB retrieved               | per GB retrieved           | per GB retrieved               | per GB retrieved               | per GB retrieved               |
+| **Lifecycle transitions**        | Yes                  | Yes                           | No                       | Yes                             | Yes                        | Yes                             | Yes                             | Yes                              |
+
+
 
 [Back to the top](#table-of-contents)
 
@@ -191,7 +208,6 @@
 
 # Other Compute Services, Lambda
 ### other-compute-services
- ### Other Compute
 | **Feature**                | **Details**                                                      |
 |----------------------------|------------------------------------------------------------------|
 | Docker                     | Container technology to run applications                         |
@@ -213,3 +229,135 @@
 | Use Cases                          | Create Thumbnails for images uploaded onto S3             |
 |                                    | Run a Serverless cron job                                 |
 | API Gateway                        | Expose Lambda functions as HTTP API                       |
+
+[Back to the top](#table-of-contents)
+
+# Deploying & Managing Infrastructure at Scale
+### deploying--managing-infrastructure-at-scale
+
+| Service           | Description                                                                                           |
+|-------------------|-------------------------------------------------------------------------------------------------------|
+| CloudFormation    | (like you write a npm to install all the package)Infrastructure as Code, works with almost all of AWS resources. Repeat across Regions & Accounts.     |
+| Beanstalk         | Platform as a Service (PaaS), limited to certain programming languages or Docker. Deploy code consistently with a known architecture: ex, ALB + EC2 + RDS. |
+| CodeDeploy        | Deploy & upgrade any application onto servers.                                                        |
+| Systems Manager   | Patch, configure, and run commands at scale.                                                          |
+
+### Developer Services
+| Service       | Description                                                                         |
+|---------------|-------------------------------------------------------------------------------------|
+| CodeCommit    | Store code in private git repository (version controlled)                           |
+| CodeBuild     | Build & test code in AWS                                                            |
+| CodeDeploy    | Deploy code onto servers                                                            |
+| CodePipeline  | Orchestration of pipeline (from code to build to deploy)                            |
+| CodeArtifact  | Store software packages / dependencies on AWS (Work with managed tools, NPM, yarn )                                     |
+| CodeStar      | Unified view for allowing developers to do CICD and code                            |
+| Cloud9        | Cloud IDE (Integrated Development Environment) with collaboration features          |
+| AWS CDK       | Define your cloud infrastructure using a programming language                       |
+
+[Back to the top](#table-of-contents)
+
+# Global Infrastructure- Global Applications in AWS
+### global-infrastructure 
+- [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
+- global application is an application deployed in multiple geographies
+-  could be Regions and / or Edge Locations
+1. Decreased Latency 
+2. Disaster Recovery (DR)
+3. Attack protection
+| Category                      | Description**                                      |
+|-----------------------------------|------------------------------------------------------|
+| Regions                       | For deploying applications and infrastructure        |
+| Availability Zones            | Made of multiple data centers                        |
+| Edge Locations (Points of Presence) | For content delivery as close as possible to users   |
+
+### Route 53 Routing Policies
+1. SIMPLE ROUTING POLICY
+2. WEIGHTED ROUTING POLICY
+3. LATENCY ROUTING POLICY
+4. FAILOVER ROUTING POLICY (Disaster Recovery)
+| Service                    | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| Route 53                   | Global Managed DNS (Domain Name System): Great to route users to the closest deployment with least latency. Great for disaster recovery strategies |
+| CloudFront                 | Global Content Delivery Network (CDN): Replicate part of your application to AWS Edge Locations – decrease latency. Cache common requests – improved user experience and decreased latency |
+| S3 Transfer Acceleration   | Increase transfer speed by transferring file to an AWS edge location which will forward the data to the S3 bucket in the target region                     |
+| AWS Global Accelerator     | Improve global application availability and performance using the AWS global network |
+
+- edge Location
+A site that CloudFront uses to cache copies of your content for faster delivery to users at any location.
+
+| Feature                     | **CloudFront**                                                                 | **S3 Cross Region Replication**                                               |
+|---------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| **Network Type**                | Global Edge network                                                            | Must be setup for each region you want replication to happen                  |
+| **Content Caching**             | Files are cached for a TTL (Time-to-Live, maybe a day)                         | Files are updated in near real-time                                           |
+| **Content Type**                | Great for static content that must be available everywhere                     | Great for dynamic content that needs to be available at low-latency in few regions |
+| **Access**                      | Read and write                                                                 | Read only                                                                     |
+
+
+| Service          | Description                                                                                  |
+|------------------|----------------------------------------------------------------------------------------------|
+| AWS Outposts     | Deploy Outposts Racks in your own Data Centers to extend AWS services                        |
+| AWS WaveLength   | Brings AWS services to the edge of the 5G networks – Ultra-low latency applications          |
+| AWS Local Zones  | Bring AWS resources (compute, database, storage, ...) closer to your users – Good for latency-sensitive applications |
+
+
+[Back to the top](#table-of-contents)
+
+ # Cloud Integration
+ ### cloud-integration
+ | Service     | Description                                                                                                            |
+|-------------|------------------------------------------------------------------------------------------------------------------------|
+| SQS         | Queue service in AWS. Multiple producers, messages are kept up to 14 days. Multiple consumers share the read and delete messages when done. Used to decouple applications in AWS. |
+| SNS         | Notification service in AWS. Subscribers: Email, Lambda, SQS, HTTP, Mobile... Multiple subscribers, send all messages to all of them. No message retention. |
+| Kinesis     | Real-time data streaming, persistence, and analysis.                                                                  |
+| Amazon MQ   | Managed message broker for ActiveMQ and RabbitMQ in the cloud (MQTT, AMQP.. protocols).                               |
+
+[Back to the top](#table-of-contents)
+
+
+# Cloud Monitoring
+### cloud-monitoring
+
+| Service                     | Description                                                                                                              |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| CloudWatch                  | Metrics: Monitor the performance of AWS services and billing metrics. Alarms: Automate notification, perform EC2 action, notify to SNS based on metric. Logs: Collect log files from EC2 instances, servers, Lambda functions... Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule. |
+| CloudTrail                  | Audit API calls made within your AWS account. CloudTrail Insights: Automated analysis of your CloudTrail Events.          |
+| X-Ray                       | Trace requests made through your distributed applications.                                                                |
+| AWS Health Dashboard        | Status of all AWS services across all regions.                                                                            |
+| AWS Account Health Dashboard| AWS events that impact your infrastructure.                                                                               |
+| Amazon CodeGuru             | Automated code reviews and application performance recommendations.                                                       |
+
+[Back to the top](#table-of-contents)
+
+# Amazon VPC
+### amazon-vpc
+
+| Topic                      | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| VPC                        | Virtual Private Cloud                                                       |
+| Subnets                    | Tied to an AZ, network partition of the VPC                                  |
+| Internet Gateway           | At the VPC level, provides Internet Access                                   |
+| NAT Gateway / Instances    | Provide internet access to private subnets                                   |
+| NACL                       | Stateless, subnet rules for inbound and outbound                             |
+| Security Groups            | Stateful, operate at the EC2 instance level or ENI                           |
+| VPC Peering                | Connect two VPCs with non-overlapping IP ranges, non-transitive              |
+| Elastic IP                 | Fixed public IPv4, ongoing cost if not in use                                |
+| VPC Endpoints              | Provide private access to AWS Services within VPC                            |
+| PrivateLink                | Privately connect to a service in a 3rd party VPC                            |
+| VPC Flow Logs              | Network traffic logs                                                         |
+| Site to Site VPN           | VPN over public internet between on-premises DC and AWS                      |
+| Client VPN                 | OpenVPN connection from your computer into your VPC                          |
+| Direct Connect             | Direct private connection to AWS                                             |
+| Transit Gateway            | Connect thousands of VPCs and on-premises networks together                  |
+
+-  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
+[Back to the top](#table-of-contents)
+
+
+
+
+[Security & Compliance](#security--compliance)
+
+
+
+
+[Machine Learning](#machine-learning)
