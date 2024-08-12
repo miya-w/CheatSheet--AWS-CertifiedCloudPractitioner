@@ -53,6 +53,8 @@
 [Back to the top](#table-of-contents)
 # EC2
 ### amazon-ec2
+![ec2](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1175.PNG)
+
 | EC2 Section – Summary                                      | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
 | EC2 Instance                                               | AMI (OS) + Instance Size (CPU + RAM) + Storage + Security Groups + EC2 User Data |
@@ -154,6 +156,7 @@
 [Back to the top](#table-of-contents)
 
 # S3
+![s3](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1178.jpg)
 ### amazon-s3
 | Amazon S3 – Summary                                       | Description                                                                 |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -179,13 +182,12 @@
 | **Minimum storage duration charge** | N/A               | N/A                           | 1 hour                   | 30 days                         | 30 days                    | 90 days                         | 90 days                         | 180 days                        |
 | **Retrieval charge**             | N/A                  | N/A                           | N/A                      | per GB retrieved               | per GB retrieved           | per GB retrieved               | per GB retrieved               | per GB retrieved               |
 | **Lifecycle transitions**        | Yes                  | Yes                           | No                       | Yes                             | Yes                        | Yes                             | Yes                             | Yes                              |
-
-
-
 [Back to the top](#table-of-contents)
 
-# databases--analytics
-### Databases & Analytics Summary in AWS
+# Databases & Analytics Summary in AWS
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1179.jpg)
+### databases--analytics
+
 | **Category**                     | **Service**                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------|
 | Relational Databases - OLTP      | RDS & Aurora (SQL)                                                                            |
@@ -316,6 +318,7 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 # Cloud Monitoring
 ### cloud-monitoring
+![cloud-watch](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1180.jpg)
 
 | Service                     | Description                                                                                                              |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -330,6 +333,7 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 # Amazon VPC
 ### amazon-vpc
+![vpc](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1174.jpg)
 
 | Topic                      | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
