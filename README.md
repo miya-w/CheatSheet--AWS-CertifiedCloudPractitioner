@@ -1,5 +1,5 @@
 # AWS Certified Cloud Practitioner CLF-C02
-
+![]()
 # table-of-contents
 1. [Cloud Computing](#cloud-computing)
 2. [AWS IAM Identity & Access Management](#aws-iam-identity-access-management)
@@ -366,4 +366,30 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 
 
-[Machine Learning](#machine-learning)
+# Machine Learning
+### machine-learning
+
+| Service      | Description                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| Rekognition  | Face detection, labeling, celebrity recognition                             |
+| Transcribe   | Audio to text (e.g., subtitles)                                             |
+| Polly        | Text to audio                                                               |
+| Translate    | Translations                                                                |
+| Lex          | Build conversational bots – chatbots                                        |
+| Connect      | Cloud contact center                                                        |
+| Comprehend   | Natural language processing                                                 |
+| SageMaker    | Machine learning for every developer and data scientist                     |
+| Forecast     | Build highly accurate forecasts                                             |
+| Kendra       | ML-powered search engine                                                    |
+| Personalize  | Real-time personalized recommendations                                      |
+| Textract     | Detect text and data in documents                                           |
+
+[Back to the top](#table-of-contents)
+
+
+
+Resources
+---
+- [udemy - Ultimate AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=KEEPLEARNING)
+- [大話AWS雲端架構：雲端應用架構圖解輕鬆學](https://readmoo.com/book/210259735000101)
+- [Intro to AWS - The Most Important Services To Learn](https://www.youtube.com/watch?v=FDEpdNdFglI&list=WL&index=14&t=393s)
