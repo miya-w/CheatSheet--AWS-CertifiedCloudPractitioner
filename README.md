@@ -266,6 +266,7 @@
 1. Decreased Latency 
 2. Disaster Recovery (DR)
 3. Attack protection
+
 | Category                      | Description**                                      |
 |-----------------------------------|------------------------------------------------------|
 | Regions                       | For deploying applications and infrastructure        |
@@ -277,6 +278,7 @@
 2. WEIGHTED ROUTING POLICY
 3. LATENCY ROUTING POLICY
 4. FAILOVER ROUTING POLICY (Disaster Recovery)
+
 | Service                    | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
 | Route 53                   | Global Managed DNS (Domain Name System): Great to route users to the closest deployment with least latency. Great for disaster recovery strategies |
