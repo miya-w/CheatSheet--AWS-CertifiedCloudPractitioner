@@ -1,5 +1,5 @@
 # AWS Certified Cloud Practitioner CLF-C02
-![]()
+![aws-import-services](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-import-services.png)
 # table-of-contents
 1. [Cloud Computing](#cloud-computing)
 2. [AWS IAM Identity & Access Management](#aws-iam-identity-access-management)
@@ -170,6 +170,9 @@
 | OpsHub                                                    | Desktop application to manage Snow Family devices                           |
 | Storage Gateway                                           | Hybrid solution to extend on-premises storage to S3                         |
 
+- snow family: AWS Snowcone,  AWS Snowball, AWS Snowmobile
+
+![avail-durable]()
 ## Performance across the S3 storage classes
 | Feature                          | S3 Standard          | S3 Intelligent-Tiering*      | S3 Express One Zone** | S3 Standard-IA                  | S3 One Zone-IA**           | S3 Glacier Instant Retrieval     | S3 Glacier Flexible Retrieval*** | S3 Glacier Deep Archive***       |
 |----------------------------------|----------------------|------------------------------|-----------------------|----------------------------------|----------------------------|----------------------------------|----------------------------------|----------------------------------|
@@ -350,10 +353,18 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | VPC Endpoints              | Provide private access to AWS Services within VPC                            |
 | PrivateLink                | Privately connect to a service in a 3rd party VPC                            |
 | VPC Flow Logs              | Network traffic logs                                                         |
-| Site to Site VPN           | VPN over public internet between on-premises DC and AWS                      |
 | Client VPN                 | OpenVPN connection from your computer into your VPC                          |
-| Direct Connect             | Direct private connection to AWS                                             |
-| Transit Gateway            | Connect thousands of VPCs and on-premises networks together                  |
+
+### On-Premises Connection
+![]()
+
+| On-Premises Connection | Details |
+|------------------------|---------|
+| Site to Site VPN       | * Connect an on-premises VPN to AWS<br>* The connection is automatically encrypted<br>* Goes over the public internet |
+| Direct Connect (DX)    | * Establish a physical connection between on-premises and AWS<br>* The connection is private, secure, and fast<br>* Goes over a private network<br>* Takes at least a month to establish |
+| Transit Gateway        | * For having transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection<br>* One single Gateway to provide this functionality<br>* Works with Direct Connect Gateway, VPN connections |
+
+
 
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
 [Back to the top](#table-of-contents)
