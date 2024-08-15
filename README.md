@@ -356,7 +356,7 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | Client VPN                 | OpenVPN connection from your computer into your VPC                          |
 
 ### On-Premises Connection
-![]()
+![on-premises](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-vpc-on-premises.png)
 
 | On-Premises Connection | Details |
 |------------------------|---------|
@@ -369,10 +369,39 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
 [Back to the top](#table-of-contents)
 
+# Security & Compliance
+### security--compliance
+![]()
+### Account Best Practices
+| Task/Feature                   | Description                                                                                           |
+|--------------------------------|-------------------------------------------------------------------------------------------------------|
+| Organizations                  | Operate multiple accounts using Organizations                                                         |
+| SCP                            | Use SCP (service control policies) to restrict account power                                           |
+| AWS Control Tower              | Easily setup multiple accounts with best-practices with AWS Control Tower                              |
+| Tags & Cost Allocation Tags    | Use Tags & Cost Allocation Tags for easy management & billing                                          |
+| IAM guidelines                 | MFA, least-privilege, password policy, password rotation                                               |
+| Config                         | Record all resources configurations & compliance over time                                             |
+| CloudFormation                 | Deploy stacks across accounts and regions                                                              |
+| Trusted Advisor                | Get insights, Support Plan adapted to your needs                                                       |
+| S3 or CloudWatch Logs          | Send Service Logs and Access Logs to S3 or CloudWatch Logs                                             |
+| CloudTrail                     | Record API calls made within your account                                                              |
+| Account is compromised         | Change the root password, delete and rotate all passwords/keys, contact the AWS support                |
+| AWS Service Catalog            | Allow users to create pre-defined stacks defined by admins using AWS Service Catalog                   |
 
-
-
-[Security & Compliance](#security--compliance)
+### Billing and CostingTools
+| Task/Feature                | Description                                                                              |
+|-----------------------------|------------------------------------------------------------------------------------------|
+| Compute Optimizer           | Recommends resources’ configurations to reduce cost                                      |
+| Pricing Calculator          | Estimate the cost of services on AWS                                                     |
+| Billing Dashboard           | Provides a high-level overview and a free tier dashboard                                 |
+| Cost Allocation Tags        | Tag resources to create detailed reports                                                 |
+| Cost and Usage Reports      | Provides the most comprehensive billing dataset                                          |
+| Cost Explorer               | View current usage in detail and forecast future usage                                   |
+| Billing Alarms              | Set alarms in us-east-1 to track overall and per-service billing                         |
+| Budgets                     | Advanced tracking for usage, costs, Reserved Instances (RI), and receive alerts          |
+| Savings Plans               | Offers an easy way to save based on long-term usage of AWS                               |
+| Cost Anomaly Detection      | Detect unusual spending using Machine Learning                                           |
+| Service Quotas              | Notify you when you’re close to a service quota threshold                                |
 
 
 
@@ -397,7 +426,41 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 [Back to the top](#table-of-contents)
 
+# Account Management, Billing, & Support
+### account-management-billing--support
+![]()
+#### Account Best Practices 
+| Account Best Practices          | Summary |
+|---------------------------------|---------|
+| Operate multiple accounts       | Use Organizations to manage multiple accounts |
+| Service Control Policies (SCP)  | Restrict account power using SCP |
+| AWS Control Tower               | Easily set up multiple accounts with best practices |
+| Tags & Cost Allocation Tags     | Use for easy management & billing |
+| IAM Guidelines                  | Implement MFA, least-privilege, password policy, and password rotation |
+| AWS Config                      | Record all resources configurations & compliance over time |
+| CloudFormation                  | Deploy stacks across accounts and regions |
+| Trusted Advisor                 | Get insights, with a Support Plan adapted to your needs |
+| Service & Access Logs           | Send logs to S3 or CloudWatch Logs |
+| CloudTrail                      | Record API calls made within your account |
+| Compromised Account             | Change root password, delete and rotate all passwords/keys, contact AWS support |
+| AWS Service Catalog             | Allow users to create pre-defined stacks defined by admins |
 
+### Billing and Costing Tools 
+| Billing and Costing Tools       | Summary |
+|---------------------------------|---------|
+| Compute Optimizer               | Recommends resources’ configurations to reduce cost |
+| Pricing Calculator              | Calculates the cost of services on AWS |
+| Billing Dashboard               | Provides a high-level overview + free tier dashboard |
+| Cost Allocation Tags            | Tags resources to create detailed reports |
+| Cost and Usage Reports          | Most comprehensive billing dataset |
+| Cost Explorer                   | View current usage (detailed) and forecast usage |
+| Billing Alarms                  | Set in us-east-1 – track overall and per-service billing |
+| Budgets                         | More advanced – track usage, costs, RI, and get alerts |
+| Savings Plans                   | Easy way to save based on long-term usage of AWS |
+| Cost Anomaly Detection          | Detect unusual spends using Machine Learning |
+| Service Quotas                  | Notifies you when you’re close to service quota threshold |
+
+[Back to the top](#table-of-contents)
 
 Resources
 ---
