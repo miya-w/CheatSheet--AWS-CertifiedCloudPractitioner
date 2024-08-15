@@ -277,6 +277,7 @@
 | Edge Locations (Points of Presence) | For content delivery as close as possible to users   |
 
 ### Route 53 Routing Policies
+
 1. SIMPLE ROUTING POLICY
 2. WEIGHTED ROUTING POLICY
 3. LATENCY ROUTING POLICY
@@ -371,6 +372,8 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 # Security & Compliance
 ### security--compliance
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-sectury-firewall.jpg)
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-sectury-firewall-manager.jpg)
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-secturity-architecture.png)
 
 | Task/Feature                       | Description                                                                                             |
