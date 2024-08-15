@@ -157,6 +157,7 @@
 
 # S3
 ![s3](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1178.jpg)
+![avail-durable](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-s3-ava-dura.jpg)
 ### amazon-s3
 | Amazon S3 – Summary                                       | Description                                                                 |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -172,7 +173,7 @@
 
 - snow family: AWS Snowcone,  AWS Snowball, AWS Snowmobile
 
-![avail-durable]()
+
 ## Performance across the S3 storage classes
 | Feature                          | S3 Standard          | S3 Intelligent-Tiering*      | S3 Express One Zone** | S3 Standard-IA                  | S3 One Zone-IA**           | S3 Glacier Instant Retrieval     | S3 Glacier Flexible Retrieval*** | S3 Glacier Deep Archive***       |
 |----------------------------------|----------------------|------------------------------|-----------------------|----------------------------------|----------------------------|----------------------------------|----------------------------------|----------------------------------|
@@ -208,6 +209,14 @@
 | Database Migration               | DMS                                                                                           |
 | Neptune                          | Graph database                                                                                |
 | Timestream                       | Time-series database                                                                          |
+
+### comparison of storage in AWS
+| Service                         | Type                         | Characteristics                                                                                                                                       |
+|---------------------------------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| EBS (Elastic Block Store)       | Block Storage                | - EBS volumes can only be attached to EC2 instances, and they act as the disk for those instances.  <br/> - Data persists even after the EC2 instance is stopped or terminated.  <br/> - Backed up by creating snapshots, which are stored in S3. |
+| S3 (Simple Storage Service)     | Object Storage               | - S3 is used for storing and retrieving any amount of data (backups, images, videos), at any time, from anywhere.                                       |
+| RDS (Relational Database Service) | Managed Relational Database  | - RDS is a managed service for running relational databases such as MySQL. <br/> - Provides scalability, automatic backups, and high availability.    |
+
 
 [Back to the top](#table-of-contents)
 
