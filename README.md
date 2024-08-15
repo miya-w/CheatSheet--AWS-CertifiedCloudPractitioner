@@ -153,6 +153,13 @@
 |                                                            | Scale EC2 instances based on the demand on your system, replace unhealthy instances |
 |                                                            | Integrated with the ELB                                            |
 
+### compare EBS and EFS
+| Service                               | Type                | Characteristics                                                                                                                                                        |
+|---------------------------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Amazon EFS (Elastic File System)       | Network File System | - (ex. Google Drive share) <br/> - Ideal for applications that require shared file storage with multiple EC2 instances. <br/> - Automatically replicates data across multiple Availability Zones (AZs) within a region, ensuring high durability and availability. |
+| Amazon EBS (Elastic Block Store)       | Block Storage       | - (ex. your own disk) <br/> - Best suited for single EC2 instance storage, functioning like a hard drive attached to a single instance. <br/> - Data is automatically replicated within the same Availability Zone for durability. Snapshots can be used for backups and are stored in S3, providing added durability across regions. |
+
+
 [Back to the top](#table-of-contents)
 
 # S3
