@@ -72,6 +72,7 @@
 
 
 ### EC2 Instance Storage – Summary  
+#### amazon-ec2-instance-storage
 | EC2 Instance Storage – Summary                             | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
 | EBS volumes  EBS (Elastic Block Store)                     | Network drives attached to one EC2 instance at a time              |
@@ -152,7 +153,7 @@
 | ***Auto Scaling Groups(ASG)***                             | Implement Elasticity for your application, across multiple AZ |
 |                                                            | Scale EC2 instances based on the demand on your system, replace unhealthy instances |
 |                                                            | Integrated with the ELB                                            |
-
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-EBS-EFS.png)
 ### compare EBS and EFS
 | Service                               | Type                | Characteristics                                                                                                                                                        |
 |---------------------------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,6 +195,14 @@
 | **Retrieval charge**             | N/A                  | N/A                           | N/A                      | per GB retrieved               | per GB retrieved           | per GB retrieved               | per GB retrieved               | per GB retrieved               |
 | **Lifecycle transitions**        | Yes                  | Yes                           | No                       | Yes                             | Yes                        | Yes                             | Yes                             | Yes                              |
 [Back to the top](#table-of-contents)
+
+### AWS Snow Family
+- Highly-secure, portable devices to collect and process data at the
+edge, and migrate data into and out of AWS
+#### AWS OpsHub
+• Historically, to use Snow Family devices, you needed a CLI (Command Line Interface tool)
+• Today, you can use AWS OpsHub (a software you install on your computer / laptop) to manage your Snow Family Device
+
 
 # Databases & Analytics Summary in AWS
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1179.jpg)
@@ -470,6 +479,29 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | Savings Plans                   | Easy way to save based on long-term usage of AWS |
 | Cost Anomaly Detection          | Detect unusual spends using Machine Learning |
 | Service Quotas                  | Notifies you when you’re close to service quota threshold |
+
+[Back to the top](#table-of-contents)
+
+###  AWS Basic, Developer, Business, and Enterprise support plans
+
+| **Feature**                             | **Basic**                           | **Developer**                      | **Business**                        | **Enterprise**                        |
+|-----------------------------------------|-------------------------------------|------------------------------------|--------------------------------------|----------------------------------------|
+| **Pricing**                             | Free                                | $29/month (or 3% of monthly usage) | $100/month (or 10% of monthly usage) | $15,000/month (or 10% of monthly usage) |
+| **24/7 Support**                        | No                                  | No                                 | Yes                                  | Yes                                    |
+| **Access to Cloud Support Engineers**   | No                                  | Business Hours                     | 24/7                                 | 24/7                                   |
+| **Response Time**                       | None                                | < 24 business hours                | < 1 hour for urgent issues           | < 15 minutes for critical issues       |
+| **Support for Third-Party Software**    | No                                  | No                                 | Yes                                  | Yes                                    |
+| **IAM Support**                         | No                                  | No                                 | Yes                                  | Yes                                    |
+| **Trusted Advisor**                     | Core Checks (7 checks)              | Core Checks (7 checks)             | Full Checks (All checks)             | Full Checks (All checks)               |
+| **Personal Health Dashboard**           | Yes                                 | Yes                                | Yes                                  | Yes                                    |
+| **Architectural Guidance**              | No                                  | General Guidance                   | Contextual Guidance                  | Consultative Review                    |
+| **Infrastructure Event Management**     | No                                  | No                                 | Yes (Additional fee)                 | Yes                                    |
+| **Technical Account Manager (TAM)**     | No                                  | No                                 | No                                   | Yes                                    |
+| **Well-Architected Reviews**            | No                                  | No                                 | Yes                                  | Yes                                    |
+| **Operations Reviews**                  | No                                  | No                                 | No                                   | Yes                                    |
+| **Proactive Guidance**                  | No                                  | No                                 | No                                   | Yes                                    |
+| **Training and API Support**            | No                                  | No                                 | Yes                                  | Yes                                    |
+| **Access to Enterprise Concierge**      | No                                  | No                                 | No                                   | Yes                                    |
 
 [Back to the top](#table-of-contents)
 
