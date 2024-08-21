@@ -227,11 +227,16 @@ edge, and migrate data into and out of AWS
 | Timestream                       | Time-series database                                                                          |
 
 ### comparison of storage in AWS
+### Comparison of Storage in AWS
+
 | Service                         | Type                         | Characteristics                                                                                                                                       |
 |---------------------------------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| EBS (Elastic Block Store)       | Block Storage                | - EBS volumes can only be attached to EC2 instances, and they act as the disk for those instances.  <br/> - Data persists even after the EC2 instance is stopped or terminated.  <br/> - Backed up by creating snapshots, which are stored in S3. |
-| S3 (Simple Storage Service)     | Object Storage               | - S3 is used for storing and retrieving any amount of data (backups, images, videos), at any time, from anywhere.                                       |
-| RDS (Relational Database Service) | Managed Relational Database  | - RDS is a managed service for running relational databases such as MySQL. <br/> - Provides scalability, automatic backups, and high availability.    |
+| EBS (Elastic Block Store)       | Block Storage                | - EBS volumes can only be attached to EC2 instances, and they act as the disk for those instances. <br/> - Data persists even after the EC2 instance is stopped or terminated. <br/> - Backed up by creating snapshots, which are stored in S3. |
+| EC2 Instance Store              | Block Storage                | - Temporary storage that is physically attached to the host machine. <br/> - Data is lost when the EC2 instance is stopped or terminated. <br/> - High I/O performance due to proximity to the instance. <br/> - No additional cost; included with the instance. |
+| EFS (Elastic File System)       | File Storage                 | - Fully managed, scalable file storage that can be mounted to multiple EC2 instances simultaneously. <br/> - Automatically scales as files are added or removed. <br/> - Provides shared access to files with strong consistency and durability. |
+| S3 (Simple Storage Service)     | Object Storage               | - S3 is used for storing and retrieving any amount of data (backups, images, videos), at any time, from anywhere. <br/> - Highly durable and scalable, ideal for big data storage, backups, and static website hosting. |
+| RDS (Relational Database Service) | Managed Relational Database  | - RDS is a managed service for running relational databases such as MySQL, PostgreSQL, and Oracle. <br/> - Provides automatic backups, patching, scaling, and high availability. |
+
 
 
 [Back to the top](#table-of-contents)
@@ -289,6 +294,7 @@ edge, and migrate data into and out of AWS
 # Global Infrastructure- Global Applications in AWS
 ### global-infrastructure 
 - [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
+- [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/?p=ngi&loc=2)
 - global application is an application deployed in multiple geographies
 -  could be Regions and / or Edge Locations
 1. Decreased Latency 
@@ -297,8 +303,8 @@ edge, and migrate data into and out of AWS
 
 | Category                      | Description**                                      |
 |-----------------------------------|------------------------------------------------------|
-| Regions                       | For deploying applications and infrastructure        |
-| Availability Zones            | Made of multiple data centers                        |
+| Regions                       | AWS has the concept of a Region, which is a physical location around the world where we cluster data centers.        |
+| Availability Zones            | An Availability Zone (AZ) is one or more discrete **data centers** with redundant power, networking, and connectivity in an AWS Region.                      |
 | Edge Locations (Points of Presence) | For content delivery as close as possible to users   |
 
 ### Route 53 Routing Policies
