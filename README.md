@@ -472,16 +472,21 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | AWS Service Catalog            | Allow users to create pre-defined stacks defined by admins using AWS Service Catalog                   |
 
 ### Billing and Costing Tools 
+
+| Billing Service            | Purpose                                                                                                         | Target Audience                                                                                                   |
+|--------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Compute Optimizer  | Reduce costs and improve performance by recommending optimal AWS resources for your workloads.                  | AWS users looking to optimize their cloud infrastructure for performance and cost efficiency.                     |
+| Pricing Calculator (Estimating costs in the cloud) | Helps in estimating costs before launching or expanding AWS services.                           | AWS users, especially those planning new deployments or budgeting for AWS services.                               |
+| Cost Explorer (Tracking costs in the cloud) | Offers detailed insights and visualizations of your AWS spending patterns over time.             | AWS users who want detailed insights into their AWS spending and need to track costs over time.                   |
+| Budgets (Monitoring against cost plans)  | Allows setting budgets and receiving alerts to ensure spending stays within predefined limits.  | AWS users who want to enforce spending limits and receive proactive alerts about their AWS costs.                 |
+
+
 | Billing and Costing Tools       | Summary |
 |---------------------------------|---------|
-| Compute Optimizer               | Recommends resources’ configurations to reduce cost |
-| Pricing Calculator              | Calculates the cost of services on AWS |
 | Billing Dashboard               | Provides a high-level overview + free tier dashboard |
 | Cost Allocation Tags            | Tags resources to create detailed reports |
 | Cost and Usage Reports          | Most comprehensive billing dataset |
-| Cost Explorer                   | View current usage (detailed) and forecast usage |
 | Billing Alarms                  | Set in us-east-1 – track overall and per-service billing |
-| Budgets                         | More advanced – track usage, costs, RI, and get alerts |
 | Savings Plans                   | Easy way to save based on long-term usage of AWS |
 | Cost Anomaly Detection          | Detect unusual spends using Machine Learning |
 | Service Quotas                  | Notifies you when you’re close to service quota threshold |
