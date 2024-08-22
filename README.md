@@ -475,10 +475,10 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 | Billing Service            | Purpose                                                                                                         | Target Audience                                                                                                   |
 |--------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Compute Optimizer  | Reduce costs and improve performance by recommending optimal AWS resources for your workloads.                  | AWS users looking to optimize their cloud infrastructure for performance and cost efficiency.                     |
-| Pricing Calculator (Estimating costs in the cloud) | Helps in estimating costs before launching or expanding AWS services.                           | AWS users, especially those planning new deployments or budgeting for AWS services.                               |
-| Cost Explorer (Tracking costs in the cloud) | Offers detailed insights and visualizations of your AWS spending patterns over time.             | AWS users who want detailed insights into their AWS spending and need to track costs over time.                   |
-| Budgets (Monitoring against cost plans)  | Allows setting budgets and receiving alerts to ensure spending stays within predefined limits.  | AWS users who want to enforce spending limits and receive proactive alerts about their AWS costs.                 |
+| **Compute Optimizer**  | Reduce costs and improve performance by recommending optimal AWS resources for your workloads.                  | AWS users looking to optimize their cloud infrastructure for performance and cost efficiency.                     |
+| **Pricing Calculator** (Estimating costs in the cloud) | Helps in **estimating costs** before launching or expanding AWS services.                           | AWS users, especially those planning new deployments or budgeting for AWS services.                               |
+| **Cost Explorer** (Tracking costs in the cloud) | Offers detailed insights and visualizations of your AWS spending patterns over time.             | AWS users who want detailed insights into their AWS spending and need to track costs over time.                   |
+| **Budgets** (Monitoring against cost plans)  | Allows setting budgets and receiving alerts to ensure spending stays within predefined limits.  | AWS users who want to enforce spending limits and receive proactive alerts about their AWS costs.                 |
 
 
 | Billing and Costing Tools       | Summary |
@@ -492,6 +492,28 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | Service Quotas                  | Notifies you when you’re close to service quota threshold |
 
 [Back to the top](#table-of-contents)
+
+# Well-Architected Framework: 6 Pillars
+
+1. **Operational Excellence**
+   - Includes the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.
+
+2. **Security**
+   - Includes the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+
+3. **Reliability**
+   - The ability of a system to recover from infrastructure or service disruptions, dynamically acquire computing resources to meet demand, and mitigate disruptions such as misconfigurations or transient network issues.
+
+4. **Performance Efficiency**
+   - Includes the ability to use computing resources efficiently to meet system requirements, and to maintain that efficiency as demand changes and technologies evolve.
+
+5. **Cost Optimization**
+   - Includes the ability to run systems to deliver business value at the lowest price point.
+
+6. **Sustainability**
+   - The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads.
+
+
 
 ###  AWS Basic, Developer, Business, and Enterprise support plans
 
