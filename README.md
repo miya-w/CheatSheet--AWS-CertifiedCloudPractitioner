@@ -407,18 +407,26 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-sectury-firewall-manager.jpg)
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-secturity-architecture.png)
 
+| **AWS Service**           | **Primary Focus**                      | **Protection Layer**                                  | **Key Capabilities**                                                | **Use Cases**                                               | **Integrations**                                         | **Managed Rules**                                                | **Advanced Features**                                         |
+|---------------------------|----------------------------------------|-------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| **AWS Shield**            | DDoS protection                        | Layer 3 (Network), Layer 4 (Transport)                 | DDoS attack mitigation                                             | Protect against volumetric DDoS attacks                     | CloudFront, Route 53, ELB                                    | Automated DDoS detection and mitigation                        | Cost protection (Shield Advanced), DRT access                 |
+| **AWS WAF**               | Web application protection             | Layer 7 (Application)                                  | Blocks/Allows HTTP/S requests based on custom rules                | Protect web applications from web-based exploits             | CloudFront, Application Load Balancer, API Gateway             | Pre-configured rules for common web vulnerabilities             | Managed rulesets from AWS Marketplace, real-time monitoring    |
+| **AWS Network Firewall**  | Network layer protection               | Layer 3 (Network), Layer 4 (Transport), Layer 7 (Application) | Stateful inspection, deep packet inspection, traffic filtering      | Control traffic between VPCs, enforce network policies       | VPC, Transit Gateway                                        | Custom network rules, integration with third-party intelligence feeds | Centralized management with AWS Firewall Manager              |
+
+
+| **AWS Service**       | **Primary Focus**                      | **Type of Service**                         | **Analyzes**                                        | **Detects**                                        | **Integrations**                         | **Output**                                      | **Ideal For**                                                             |
+|-----------------------|----------------------------------------|---------------------------------------------|-----------------------------------------------------|----------------------------------------------------|------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------|
+| **AWS GuardDuty**     | Threat detection and monitoring        | Continuous monitoring                       | CloudTrail logs, VPC flow logs, DNS logs             | Threats and suspicious activities                   | Security Hub, Lambda, EventBridge        | Threat findings with severity                   | Continuous threat detection and real-time monitoring                     |
+| **AWS Inspector**     | Vulnerability management               | On-demand or continuous scanning            | EC2 instances, containers (ECR)                      | Vulnerabilities and deviations from best practices  | Security Hub, Systems Manager            | Vulnerability reports and recommendations       | Ensuring infrastructure security and compliance                          |
+| **AWS Detective**     | Security investigation and analysis    | Post-incident analysis and investigation    | CloudTrail logs, VPC flow logs, GuardDuty findings   | Root cause and scope of security incidents          | Security Hub, GuardDuty, Detective       | Interactive graphs and detailed investigation tools | Detailed investigations and understanding the impact of security incidents |
+
+
 | Task/Feature                       | Description                                                                                             |
 |------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Shared Responsibility on AWS       | Defines the division of responsibilities between AWS and the customer                                   |
-| Shield                             | Automatic DDoS Protection with 24/7 support for advanced protection                                     |
-| WAF                                | Firewall to filter incoming requests based on rules                                                     |
-| KMS                                | Encryption keys managed by AWS                                                                          |
-| CloudHSM                           | Hardware encryption where the customer manages the encryption keys                                      |
-| AWS Certificate Manager            | Provision, manage, and deploy SSL/TLS Certificates                                                      |
-| Artifact                           | Access compliance reports such as PCI, ISO, etc.                                                        |
-| GuardDuty                          | Detect malicious behavior using VPC, DNS, and CloudTrail Logs                                           |
-| Inspector                          | Identify software vulnerabilities in EC2, ECR Images, and Lambda functions                              |
-| Network Firewall                   | Protect VPC against network attacks                                                                     |
+| KMS (Key Management Service)       | Encryption keys managed by AWS                                                                          |
+| CloudHSM                           | (AWS provisions encryption hardware) Hardware encryption where the customer manages the encryption keys |
+| ACM (AWS Certificate Manager)      | Provision, manage, and deploy SSL/TLS Certificates.                                                     |
 | Config                             | Track configuration changes and compliance against rules                                                |
 | Macie                              | Identify sensitive data (e.g., PII) in Amazon S3 buckets                                                |
 | CloudTrail                         | Track API calls made by users within an account                                                         |
@@ -429,7 +437,8 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | IAM Access Analyzer                | Identify which resources are shared externally                                                          |
 | Firewall Manager                   | Manage security rules across an Organization (WAF, Shield, etc.)                                        |
 
-
+- What are SSL and TLS?
+SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols designed to provide secure communication over a computer network.
 
 # Machine Learning
 ### machine-learning
