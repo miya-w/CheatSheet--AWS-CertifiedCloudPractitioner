@@ -228,7 +228,8 @@ edge, and migrate data into and out of AWS
 
 ### comparison of storage in AWS
 ### Comparison of Storage in AWS
-
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-storage-type-1.png)
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-storage-type-2.png)
 | Service                         | Type                         | Characteristics                                                                                                                                       |
 |---------------------------------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | EBS (Elastic Block Store)       | Block Storage                | - EBS volumes can only be attached to EC2 instances, and they act as the disk for those instances. <br/> - Data persists even after the EC2 instance is stopped or terminated. <br/> - Backed up by creating snapshots, which are stored in S3. |
@@ -237,6 +238,7 @@ edge, and migrate data into and out of AWS
 | S3 (Simple Storage Service)     | Object Storage               | - S3 is used for storing and retrieving any amount of data (backups, images, videos), at any time, from anywhere. <br/> - Highly durable and scalable, ideal for big data storage, backups, and static website hosting. |
 | RDS (Relational Database Service) | Managed Relational Database  | - RDS is a managed service for running relational databases such as MySQL, PostgreSQL, and Oracle. <br/> - Provides automatic backups, patching, scaling, and high availability. |
 
+- [What's the Difference Between Block, Object, and File Storage in AWS?](https://www.youtube.com/watch?v=btcbNARavUM)
 
 
 [Back to the top](#table-of-contents)
@@ -407,12 +409,16 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-sectury-firewall-manager.jpg)
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-secturity-architecture.png)
 
+### Compare the Shield, WAF, Network Firewall
+
 | **AWS Service**           | **Primary Focus**                      | **Protection Layer**                                  | **Key Capabilities**                                                | **Use Cases**                                               | **Integrations**                                         | **Managed Rules**                                                | **Advanced Features**                                         |
 |---------------------------|----------------------------------------|-------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
 | **AWS Shield**            | DDoS protection                        | Layer 3 (Network), Layer 4 (Transport)                 | DDoS attack mitigation                                             | Protect against volumetric DDoS attacks                     | CloudFront, Route 53, ELB                                    | Automated DDoS detection and mitigation                        | Cost protection (Shield Advanced), DRT access                 |
 | **AWS WAF**               | Web application protection             | Layer 7 (Application)                                  | Blocks/Allows HTTP/S requests based on custom rules                | Protect web applications from web-based exploits             | CloudFront, Application Load Balancer, API Gateway             | Pre-configured rules for common web vulnerabilities             | Managed rulesets from AWS Marketplace, real-time monitoring    |
 | **AWS Network Firewall**  | Network layer protection               | Layer 3 (Network), Layer 4 (Transport), Layer 7 (Application) | Stateful inspection, deep packet inspection, traffic filtering      | Control traffic between VPCs, enforce network policies       | VPC, Transit Gateway                                        | Custom network rules, integration with third-party intelligence feeds | Centralized management with AWS Firewall Manager              |
 
+
+### Compare the GuardDuty, Inspector, Detective.
 
 | **AWS Service**       | **Primary Focus**                      | **Type of Service**                         | **Analyzes**                                        | **Detects**                                        | **Integrations**                         | **Output**                                      | **Ideal For**                                                             |
 |-----------------------|----------------------------------------|---------------------------------------------|-----------------------------------------------------|----------------------------------------------------|------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------|
@@ -439,7 +445,8 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 - What are SSL and TLS?
 SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols designed to provide secure communication over a computer network.
-
+- [ OSI Model 1-7 layers](https://aws.amazon.com/what-is/osi-model/)
+   Layer 1: Physical Layer, Layer 2: Data Link Layer, Layer 3: Network Layer,Layer 4: Transport Layer ,Layer 5: Session Layer, Layer 6: Presentation Layer, Layer 7: Application Layer. 
 # Machine Learning
 ### machine-learning
 
@@ -499,6 +506,9 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 | Savings Plans                   | Easy way to save based on long-term usage of AWS |
 | Cost Anomaly Detection          | Detect unusual spends using Machine Learning |
 | Service Quotas                  | Notifies you when you’re close to service quota threshold |
+
+ex. AWS Compute Optimizer delivers recommendations for which of the following AWS resources?
+Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS Lambda functions, Amazon ECS services running on Fargate.
 
 [Back to the top](#table-of-contents)
 
