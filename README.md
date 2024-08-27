@@ -411,12 +411,17 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 
 ### Compare the Shield, WAF, Network Firewall
 
-| **AWS Service**           | **Primary Focus**                      | **Protection Layer**                                  | **Key Capabilities**                                                | **Use Cases**                                               | **Integrations**                                         | **Managed Rules**                                                | **Advanced Features**                                         |
-|---------------------------|----------------------------------------|-------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
-| **AWS Shield**            | DDoS protection                        | Layer 3 (Network), Layer 4 (Transport)                 | DDoS attack mitigation                                             | Protect against volumetric DDoS attacks                     | CloudFront, Route 53, ELB                                    | Automated DDoS detection and mitigation                        | Cost protection (Shield Advanced), DRT access                 |
-| **AWS WAF**               | Web application protection             | Layer 7 (Application)                                  | Blocks/Allows HTTP/S requests based on custom rules                | Protect web applications from web-based exploits             | CloudFront, Application Load Balancer, API Gateway             | Pre-configured rules for common web vulnerabilities             | Managed rulesets from AWS Marketplace, real-time monitoring    |
-| **AWS Network Firewall**  | Network layer protection               | Layer 3 (Network), Layer 4 (Transport), Layer 7 (Application) | Stateful inspection, deep packet inspection, traffic filtering      | Control traffic between VPCs, enforce network policies       | VPC, Transit Gateway                                        | Custom network rules, integration with third-party intelligence feeds | Centralized management with AWS Firewall Manager              |
+| Service                | Purpose                                                                                      | Layer Protected                          | Key Features                                                                                               | Use Cases                                                                                                  | Integration Points                                                        |
+|------------------------|----------------------------------------------------------------------------------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| AWS Shield             | DDoS protection                                                                              | Network and Transport (Layer 3/4)        | - Automatic protection against DDoS attacks <br> - Two tiers: Standard and Advanced <br> - Advanced provides near real-time attack visibility and access to AWS DDoS Response Team (DRT) | - Protects against large-scale DDoS attacks <br> - Basic protection for all AWS services                     | Automatically integrated with AWS services like CloudFront, Route 53, and Elastic Load Balancing             |
+| AWS WAF (Web Application Firewall) | Protects web applications from common web exploits                                           | Application (Layer 7)                    | - Define rules to block common attack patterns like SQL injection and XSS <br> - Integration with CloudFront, ALB, API Gateway <br> - Managed rule groups for quick setup               | - Protects web applications from specific threats like SQL injection and XSS <br> - Customized security rules | CloudFront (CDN), Application Load Balancer (ALB), API Gateway                                                |
+| AWS Network Firewall   | Network-level protection within VPCs                                                         | Network (Layer 3/4)                      | - Stateful traffic inspection <br> - Intrusion prevention <br> - Web filtering to block malicious traffic <br> - Fine-grained control over network traffic                           | - Enforces network policies within VPCs <br> - Blocks or allows specific traffic based on IP, protocols, and ports <br> - Provides deeper packet inspection                                 | VPCs (Virtual Private Cloud), Transit Gateway                                                                 |
 
+                                    
+
+Q: If you want to protect your application from Cross Site Scripting and SQL Injection attacks will you use AWS WAF or AWS Shield or AWS Firewall?
+A: AWS WAF
+---
 
 ### Compare the GuardDuty, Inspector, Detective.
 
@@ -426,16 +431,15 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | **AWS Inspector**     | Vulnerability management               | On-demand or continuous scanning            | EC2 instances, containers (ECR)                      | Vulnerabilities and deviations from best practices  | Security Hub, Systems Manager            | Vulnerability reports and recommendations       | Ensuring infrastructure security and compliance                          |
 | **AWS Detective**     | Security investigation and analysis    | Post-incident analysis and investigation    | CloudTrail logs, VPC flow logs, GuardDuty findings   | Root cause and scope of security incidents          | Security Hub, GuardDuty, Detective       | Interactive graphs and detailed investigation tools | Detailed investigations and understanding the impact of security incidents |
 
-### AWS config 
-| Feature                     | Description                                                                                                         |
+---
+## AWS config 
+| Config Feature              | Description                                                                                                         |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Purpose                     | Helps with auditing and recording compliance of your AWS resources; records configurations and changes over time.    |
 | Data Storage                | Configuration data can be stored in S3 and analyzed using Athena.                                                   |
 | Questions Addressed         | - Is there unrestricted SSH access to my security groups? <br> - Do my buckets have any public access? <br> - How has my ALB configuration changed over time? |
 | Alerts                      | Can receive alerts via SNS notifications for any changes.                                                           |
 | Service Scope               | AWS Config is a per-region service but can be aggregated across regions and accounts.                                |
-
-
 
 
 | Task/Feature                       | Description                                                                                             |
@@ -456,7 +460,13 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 - What are SSL and TLS?
 SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols designed to provide secure communication over a computer network.
 - [ OSI Model 1-7 layers](https://aws.amazon.com/what-is/osi-model/)
-   Layer 1: Physical Layer, Layer 2: Data Link Layer, Layer 3: Network Layer,Layer 4: Transport Layer ,Layer 5: Session Layer, Layer 6: Presentation Layer, Layer 7: Application Layer. 
+   1. Layer 1: Physical Layer, 
+   2. Layer 2: Data Link Layer, 
+   3. Layer 3: Network Layer,
+   4. Layer4: Transport Layer ,
+   5. Layer 5: Session Layer, 
+   6. Layer 6: Presentation Layer, 
+   7. Layer 7: Application Layer. 
 # Machine Learning
 ### machine-learning
 
