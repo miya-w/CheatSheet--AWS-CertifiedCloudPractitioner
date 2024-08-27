@@ -286,7 +286,7 @@ edge, and migrate data into and out of AWS
 | CodeBuild     | Build & test code in AWS                                                            |
 | CodeDeploy    | Deploy code onto servers                                                            |
 | CodePipeline  | Orchestration of pipeline (from code to build to deploy)                            |
-| CodeArtifact  | Store software packages / dependencies on AWS (Work with managed tools, NPM, yarn )                                     |
+| CodeArtifact  | Store software packages / dependencies on AWS (Work with managed tools, NPM, yarn )                        |
 | CodeStar      | Unified view for allowing developers to do CICD and code                            |
 | Cloud9        | Cloud IDE (Integrated Development Environment) with collaboration features          |
 | AWS CDK       | Define your cloud infrastructure using a programming language                       |
@@ -426,6 +426,17 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | **AWS Inspector**     | Vulnerability management               | On-demand or continuous scanning            | EC2 instances, containers (ECR)                      | Vulnerabilities and deviations from best practices  | Security Hub, Systems Manager            | Vulnerability reports and recommendations       | Ensuring infrastructure security and compliance                          |
 | **AWS Detective**     | Security investigation and analysis    | Post-incident analysis and investigation    | CloudTrail logs, VPC flow logs, GuardDuty findings   | Root cause and scope of security incidents          | Security Hub, GuardDuty, Detective       | Interactive graphs and detailed investigation tools | Detailed investigations and understanding the impact of security incidents |
 
+### AWS config 
+| Feature                     | Description                                                                                                         |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------|
+| Purpose                     | Helps with auditing and recording compliance of your AWS resources; records configurations and changes over time.    |
+| Data Storage                | Configuration data can be stored in S3 and analyzed using Athena.                                                   |
+| Questions Addressed         | - Is there unrestricted SSH access to my security groups? <br> - Do my buckets have any public access? <br> - How has my ALB configuration changed over time? |
+| Alerts                      | Can receive alerts via SNS notifications for any changes.                                                           |
+| Service Scope               | AWS Config is a per-region service but can be aggregated across regions and accounts.                                |
+
+
+
 
 | Task/Feature                       | Description                                                                                             |
 |------------------------------------|---------------------------------------------------------------------------------------------------------|
@@ -437,7 +448,6 @@ A site that CloudFront uses to cache copies of your content for faster delivery 
 | Macie                              | Identify sensitive data (e.g., PII) in Amazon S3 buckets                                                |
 | CloudTrail                         | Track API calls made by users within an account                                                         |
 | AWS Security Hub                   | Gather security findings from multiple AWS accounts                                                     |
-| Amazon Detective                   | Investigate the root cause of security issues or suspicious activities                                  |
 | AWS Abuse                          | Report AWS resources used for abusive or illegal purposes                                               |
 | Root user privileges               | Includes changing account settings, closing the account, changing/canceling the support plan, or registering as a seller in the Reserved Instance Marketplace |
 | IAM Access Analyzer                | Identify which resources are shared externally                                                          |
