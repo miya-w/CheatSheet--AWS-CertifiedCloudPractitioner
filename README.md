@@ -17,7 +17,8 @@
 14. [Security & Compliance](#security--compliance)
 15. [Machine Learning](#machine-learning)
 16. [Account Management, Billing, & Support](#account-management-billing--support)
-17. [Other](#other)
+17. [Other](#othergit config --global user.email "74698335+miya-w@users.noreply.github.com")
+
 
 
 # cloud-computing
