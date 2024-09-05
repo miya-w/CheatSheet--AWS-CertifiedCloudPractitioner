@@ -228,7 +228,8 @@ edge, and migrate data into and out of AWS
 | Neptune                          | Graph database                                                                                |
 | Timestream                       | Time-series database                                                                          |
 
-### comparison of storage in AWS
+- Which AWS service can be used to provision resources to run big data workloads on Hadoop clusters?
+
 ### Comparison of Storage in AWS
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-storage-type-1.png)
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-storage-type-2.png)
@@ -327,6 +328,15 @@ edge, and migrate data into and out of AWS
 
 - edge Location
 A site that CloudFront uses to cache copies of your content for faster delivery to users at any location.
+
+Test 2 Question 47
+Which AWS service helps with global application availability and performance using the AWS global network?
+- Elastic Load Balancing (ELB)
+- Amazon Route 53
+- AWS Global Accelerator 
+- Amazon CloudFront
+
+- AWS Global Accelerator (O)
 
 | Feature                     | **CloudFront**                                                                 | **S3 Cross Region Replication**                                               |
 |---------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
