@@ -566,6 +566,21 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 ex. AWS Compute Optimizer delivers recommendations for which of the following AWS resources?
 Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS Lambda functions, Amazon ECS services running on Fargate.
 
+- Question: AWS Compute Optimizer delivers recommendations for which of the following AWS resources? (Select two)
+
+   - ()Amazon Elastic Block Store (Amazon EBS), AWS Lambda functions
+
+   - ()Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon Elastic File System (Amazon EFS)
+
+   - ()Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EC2 Auto Scaling groups
+
+   - ()Amazon Elastic File System (Amazon EFS), AWS Lambda functions
+
+   - ()AWS Lambda functions, Amazon Simple Storage Service (Amazon S3)
+
+A: Correct selection
+Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EC2 Auto Scaling groupsAmazon Elastic Block Store (Amazon EBS), AWS Lambda functions
+
 [Back to the top](#table-of-contents)
 
 # Well-Architected Framework: 6 Pillars
