@@ -181,6 +181,22 @@
 | OpsHub                                                    | Desktop application to manage Snow Family devices                           |
 | Storage Gateway                                           | Hybrid solution to extend on-premises storage to S3                         |
 
+Question 10
+
+A photo sharing web application wants to store thumbnails of user-uploaded images on Amazon Simple Storage Service (Amazon S3). The thumbnails are rarely used but need to be immediately accessible from the web application. The thumbnails can be regenerated easily if they are lost. Which is the most cost-effective way to store these thumbnails on Amazon Simple Storage Service (Amazon S3)?
+
+Use Amazon S3 Standard to store the thumbnails
+
+Use Amazon S3 Glacier Flexible Retrieval to store the thumbnails
+
+Your answer is incorrect
+Use Amazon S3 Standard-Infrequent Access (S3 Standard-IA) to store the thumbnails
+
+Correct answer
+Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnails
+
+
+
 - snow family: AWS Snowcone,  AWS Snowball, AWS Snowmobile
 
 
@@ -196,8 +212,9 @@
 | **Minimum storage duration charge** | N/A               | N/A                           | 1 hour                   | 30 days                         | 30 days                    | 90 days                         | 90 days                         | 180 days                        |
 | **Retrieval charge**             | N/A                  | N/A                           | N/A                      | per GB retrieved               | per GB retrieved           | per GB retrieved               | per GB retrieved               | per GB retrieved               |
 | **Lifecycle transitions**        | Yes                  | Yes                           | No                       | Yes                             | Yes                        | Yes                             | Yes                             | Yes                              |
-[Back to the top](#table-of-contents)
 
+
+[Back to the top](#table-of-contents)
 ### AWS Snow Family
 - Highly-secure, portable devices to collect and process data at the
 edge, and migrate data into and out of AWS
@@ -210,17 +227,23 @@ edge, and migrate data into and out of AWS
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/IMG_1179.jpg)
 ### databases--analytics
 
+| **Service**                         | **Category**                              | **Key Features**                                                                                                    | **Use Case**                                                                                                         |
+|-------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| **RDS (Relational Database Service)** | Relational Database - OLTP (SQL)          | Managed relational databases (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server). Automates backups, patching, scaling. | Traditional relational databases for transaction-heavy applications (OLTP) like e-commerce, finance, or CRM systems. |
+| **Aurora**                          | Relational Database - OLTP (SQL)          | Compatible with MySQL and PostgreSQL, highly available, auto-scaling, designed for high performance and durability.  | Applications needing high throughput, scalability, and reliability. Suitable for both OLTP and analytics workloads.  |
+| **DocumentDB**                      | NoSQL Document Database (JSON)            | Managed database service compatible with MongoDB, designed for JSON data, supports high scalability and availability. | Applications that require a NoSQL database with flexible schema and document storage, e.g., content management systems or mobile apps. |
+| **Neptune**                         | Graph Database                            | Fully managed graph database supporting Gremlin (property graph) and SPARQL (RDF) query languages. Highly scalable and available. | Applications dealing with highly connected data like social networks, recommendation engines, fraud detection, and knowledge graphs. |
+| **Athena**                          | Serverless Query Engine (SQL)             | Serverless service that allows SQL querying directly over data stored in Amazon S3. No need for infrastructure setup. | Ad-hoc querying, data analysis, or reporting on large datasets stored in S3 without setting up databases or clusters. |
+
+
+
 | **Category**                     | **Service**                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------|
-| Relational Databases - OLTP      | RDS & Aurora (SQL)                                                                            |
-| Differences                      | Multi-AZ, Read Replicas, Multi-Region                                                         |
 | In-memory Database               | ElastiCache                                                                                   |
 | Key/Value Database               | DynamoDB (serverless) & DAX (cache for DynamoDB)                                              |
 | Warehouse - OLAP                 | Redshift (SQL)                                                                                |
 | Hadoop Cluster                   | EMR                                                                                           |
-| Athena                           | Query data on Amazon S3 (serverless & SQL)                                                    |
 | QuickSight                       | Dashboards on your data (serverless)                                                          |
-| DocumentDB                       | “Aurora for MongoDB” (JSON – NoSQL database)                                                  |
 | Amazon QLDB                      | Financial Transactions Ledger (immutable journal, cryptographically verifiable)               |
 | Amazon Managed Blockchain        | Managed Hyperledger Fabric & Ethereum blockchains                                             |
 | Glue                             | Managed ETL (Extract Transform Load) and Data Catalog service                                 |
@@ -413,6 +436,7 @@ Which AWS service helps with global application availability and performance usi
 
 
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
+
 [Back to the top](#table-of-contents)
 
 # Security & Compliance
@@ -572,7 +596,7 @@ Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS La
 |-----------------------------------------|-------------------------------------|------------------------------------|--------------------------------------|----------------------------------------|
 | **Pricing**                             | Free                                | $29/month (or 3% of monthly usage) | $100/month (or 10% of monthly usage) | $15,000/month (or 10% of monthly usage) |
 | **24/7 Support**                        | No                                  | No                                 | Yes                                  | Yes                                    |
-| **Access to Cloud Support Engineers**   | No                                  | Business Hours                     | 24/7                                 | 24/7                                   |
+| **Access to Cloud Support Engineers**   | No                                  | Business Hours                     | 24/7 phone, web , and chat                                  | 24/7 phone, web , and chat                                   |
 | **Response Time**                       | None                                | < 24 business hours                | < 1 hour for urgent issues           | < 15 minutes for critical issues       |
 | **Support for Third-Party Software**    | No                                  | No                                 | Yes                                  | Yes                                    |
 | **IAM Support**                         | No                                  | No                                 | Yes                                  | Yes                                    |
@@ -586,6 +610,13 @@ Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS La
 | **Proactive Guidance**                  | No                                  | No                                 | No                                   | Yes                                    |
 | **Training and API Support**            | No                                  | No                                 | Yes                                  | Yes                                    |
 | **Access to Enterprise Concierge**      | No                                  | No                                 | No                                   | Yes                                    |
+
+- **AWS Trusted Advisor** is a service that provides real-time guidance to help you optimize your AWS infrastructure, improve security and performance, reduce costs, and monitor service limits. It offers best practices and checks across five categories:
+- Cost Optimization
+- Performance
+- Security
+- Fault Tolerance
+- Service Limits
 
 [Back to the top](#table-of-contents)
 
