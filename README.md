@@ -231,11 +231,12 @@ edge, and migrate data into and out of AWS
 |-------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | **RDS (Relational Database Service)** | Relational Database - OLTP (SQL)          | Managed relational databases (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server). Automates backups, patching, scaling. | Traditional relational databases for transaction-heavy applications (OLTP) like e-commerce, finance, or CRM systems. |
 | **Aurora**                          | Relational Database - OLTP (SQL)          | Compatible with MySQL and PostgreSQL, highly available, auto-scaling, designed for high performance and durability.  | Applications needing high throughput, scalability, and reliability. Suitable for both OLTP and analytics workloads.  |
+| **Redshift**                        | Data Warehouse - OLAP (SQL)               | Managed, scalable data warehouse supporting SQL queries. Massively Parallel Processing (MPP), columnar storage, integrates with BI tools. | Large-scale data analytics and business intelligence workloads, designed for fast querying and reporting over massive datasets. |
 | **DocumentDB**                      | NoSQL Document Database (JSON)            | Managed database service compatible with MongoDB, designed for JSON data, supports high scalability and availability. | Applications that require a NoSQL database with flexible schema and document storage, e.g., content management systems or mobile apps. |
 | **Neptune**                         | Graph Database                            | Fully managed graph database supporting Gremlin (property graph) and SPARQL (RDF) query languages. Highly scalable and available. | Applications dealing with highly connected data like social networks, recommendation engines, fraud detection, and knowledge graphs. |
 | **Athena**                          | Serverless Query Engine (SQL)             | Serverless service that allows SQL querying directly over data stored in Amazon S3. No need for infrastructure setup. | Ad-hoc querying, data analysis, or reporting on large datasets stored in S3 without setting up databases or clusters. |
 
-
+- Online Analytical Processing (OLAP) involve querying and analyzing large datasets, often for business intelligence (BI), reporting, and data analytics.
 
 | **Category**                     | **Service**                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------|
@@ -248,7 +249,6 @@ edge, and migrate data into and out of AWS
 | Amazon Managed Blockchain        | Managed Hyperledger Fabric & Ethereum blockchains                                             |
 | Glue                             | Managed ETL (Extract Transform Load) and Data Catalog service                                 |
 | Database Migration               | DMS                                                                                           |
-| Neptune                          | Graph database                                                                                |
 | Timestream                       | Time-series database                                                                          |
 
 - Which AWS service can be used to provision resources to run big data workloads on Hadoop clusters?
