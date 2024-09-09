@@ -293,6 +293,20 @@ edge, and migrate data into and out of AWS
 |                                    | Run a Serverless cron job                                 |
 | API Gateway                        | Expose Lambda functions as HTTP API                       |
 
+- Test 3 Question 31
+A startup runs its proprietary application on docker containers. As a Cloud Practitioner, which AWS service would you recommend so that the startup can run containers and still have access to the underlying servers?
+
+Your answer is incorrect
+AWS Fargate
+
+Amazon Elastic Container Registry (Amazon ECR)
+
+AWS Lambda
+
+Correct answer
+Amazon Elastic Container Service (Amazon ECS)
+
+
 [Back to the top](#table-of-contents)
 
 # Deploying & Managing Infrastructure at Scale
@@ -342,7 +356,9 @@ edge, and migrate data into and out of AWS
 3. LATENCY ROUTING POLICY
 4. FAILOVER ROUTING POLICY (Disaster Recovery)
 
-| Service                    | Description                                                                 |
+## Global Applications in AWS
+- A global application is an application deployed in multiple geographies
+| Global Applications Service | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
 | Route 53                   | Global Managed DNS (Domain Name System): Great to route users to the closest deployment with least latency. Great for disaster recovery strategies |
 | CloudFront                 | Global Content Delivery Network (CDN): Replicate part of your application to AWS Edge Locations – decrease latency. Cache common requests – improved user experience and decreased latency |
@@ -374,6 +390,24 @@ Which AWS service helps with global application availability and performance usi
 | AWS Outposts     | Deploy Outposts Racks in your own Data Centers to extend AWS services                        |
 | AWS WaveLength   | Brings AWS services to the edge of the 5G networks – Ultra-low latency applications          |
 | AWS Local Zones  | Bring AWS resources (compute, database, storage, ...) closer to your users – Good for latency-sensitive applications |
+
+Test3 Question 41 Incorrect
+
+A company has a static website hosted on an Amazon Simple Storage Service (Amazon S3) bucket in an AWS Region in Asia. Although most of its users are in Asia, now it wants to drive growth globally. How can it improve the global performance of its static website?
+
+Correct answer
+Use Amazon CloudFront to improve the performance of your website
+
+Use AWS Web Application Firewall (AWS WAF) to improve the performance of your website
+
+Use Amazon CloudFormation to improve the performance of your website
+
+Your answer is incorrect
+Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of your website
+
+
+
+
 
 
 [Back to the top](#table-of-contents)
@@ -581,6 +615,24 @@ Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS La
 A: Correct selection
 Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EC2 Auto Scaling groupsAmazon Elastic Block Store (Amazon EBS), AWS Lambda functions
 
+Question 52 Incorrect
+An IT company is on a cost-optimization spree and wants to identify all Amazon Elastic Compute Cloud (Amazon EC2) instances that are under-utilized. Which AWS services can be used off-the-shelf to address this use-case without needing any manual configurations? (Select two)
+
+AWS Cost & Usage Report (AWS CUR)
+
+Correct selection
+AWS Trusted Advisor
+
+Your selection is correct
+AWS Cost Explorer
+
+AWS Budgets
+
+Your selection is incorrect
+Amazon CloudWatch
+
+
+
 [Back to the top](#table-of-contents)
 
 # Well-Architected Framework: 6 Pillars
@@ -625,6 +677,8 @@ Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EC2 Auto Scaling gro
 | **Proactive Guidance**                  | No                                  | No                                 | No                                   | Yes                                    |
 | **Training and API Support**            | No                                  | No                                 | Yes                                  | Yes                                    |
 | **Access to Enterprise Concierge**      | No                                  | No                                 | No                                   | Yes                                    |
+
+![trust-advisor](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-trust-advisor.jpg)
 
 - **AWS Trusted Advisor** is a service that provides real-time guidance to help you optimize your AWS infrastructure, improve security and performance, reduce costs, and monitor service limits. It offers best practices and checks across five categories:
 - Cost Optimization
