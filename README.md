@@ -307,6 +307,27 @@ Correct answer
 Amazon Elastic Container Service (Amazon ECS)
 
 
+Question 60 Incorrect
+
+AWS Lambda pricing is based on which of the following criteria? (Select two)
+
+The number of lines of code for the AWS Lambda function
+
+The language runtime of the AWS Lambda function
+
+Your selection is correct
+Number of requests for the AWS Lambda function
+
+Your selection is incorrect
+The size of the deployment package for the AWS Lambda function
+Correct selection
+
+The time it takes for the AWS Lambda function to execute
+
+
+** With AWS Lambda, you pay only for what you use. You are charged based on the number of requests for your functions and the duration, the time it takes for your code to execute.** 
+
+
 [Back to the top](#table-of-contents)
 
 # Deploying & Managing Infrastructure at Scale
@@ -491,6 +512,7 @@ Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of 
 
 Q: If you want to protect your application from Cross Site Scripting and SQL Injection attacks will you use AWS WAF or AWS Shield or AWS Firewall?
 A: AWS WAF
+
 ---
 
 ### Compare the GuardDuty, Inspector, Detective.
