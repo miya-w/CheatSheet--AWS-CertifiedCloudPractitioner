@@ -66,10 +66,13 @@
 | Purchasing Options                                         | On-Demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance |
 
 ### Communicate with EC2
+### Communicate with EC2
+
 | Method                  | Description                                           |
 |-------------------------|-------------------------------------------------------|
-| SSH                     | Start a terminal into our EC2 Instances (port 22)     |
-| EC2 Instance connect    | Connect to your EC2 instance within your browser      |
+| SSH                     | Start a terminal into your EC2 instance (port 22) (Mac, Linux, Windows>=10)     |
+| EC2 Instance Connect     | Connect to your EC2 instance within your browser (Mac, Linux, Windows)    |
+| PuTTY                   | Use PuTTY (a free SSH client) to securely connect to your EC2 instance on Windows, using the private key (port 22)(Windows only) |
 
 
 
@@ -604,9 +607,11 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 | Billing Service            | Purpose                                                                                                         | Target Audience                                                                                                   |
 |--------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | **Compute Optimizer**  | Reduce costs and improve performance by recommending optimal AWS resources for your workloads.                  | AWS users looking to optimize their cloud infrastructure for performance and cost efficiency.                     |
-| **Pricing Calculator** (Estimating costs in the cloud) | Helps in **estimating costs** before launching or expanding AWS services.                           | AWS users, especially those planning new deployments or budgeting for AWS services.                               |
+| **Pricing Calculator** (Estimating costs in the cloud) | Helps in **estimating costs** before **launching or expanding AWS services.**                           | AWS users, especially those planning new deployments or budgeting for AWS services.                               |
 | **Cost Explorer** (Tracking costs in the cloud) | Offers detailed insights and visualizations of your AWS spending patterns over time.             | AWS users who want detailed insights into their AWS spending and need to track costs over time.                   |
 | **Budgets** (Monitoring against cost plans)  | Allows setting budgets and receiving alerts to ensure spending stays within predefined limits.  | AWS users who want to enforce spending limits and receive proactive alerts about their AWS costs.                 |
+
+- You can generate reports, visualize trends, and use forecasting models to **estimate future usage and spending** basing on the current useage.
 
 
 | Billing and Costing Tools       | Summary |
