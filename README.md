@@ -658,7 +658,19 @@ AWS Budgets
 Your selection is incorrect
 Amazon CloudWatch
 
+Question 37 Incorrect
 
+Which of the following AWS services can be used to forecast your **AWS account usage and costs**?
+
+Your answer is incorrect
+AWS Pricing Calculator
+
+AWS Cost & Usage Report (AWS CUR)
+
+Correct answer
+AWS Cost Explorer
+
+AWS Budgets
 
 [Back to the top](#table-of-contents)
 
