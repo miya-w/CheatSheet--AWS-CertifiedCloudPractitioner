@@ -125,7 +125,7 @@
 
 
 # Elastic Load Balancing & Auto Scaling Groups Section
-#### elastic-load-balancing-auto-scaling-group
+### elastic-load-balancing-auto-scaling-group
 
 | Scaling Type         | Description                                                      |
 |----------------------|------------------------------------------------------------------|
@@ -158,6 +158,13 @@
 | ***Auto Scaling Groups(ASG)***                             | Implement Elasticity for your application, across multiple AZ |
 |                                                            | Scale EC2 instances based on the demand on your system, replace unhealthy instances |
 |                                                            | Integrated with the ELB                                            |
+
+### load balancers offered by AWS:
+• Application Load Balancer (HTTP / HTTPS only) – Layer 7
+• Network Load Balancer (ultra-high performance, allows for TCP) – Layer 4
+• Gateway Load Balancer – Layer 3
+![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-ec2-load-balancer.png)
+
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-EBS-EFS.png)
 ### compare EBS and EFS
 | Service                               | Type                | Characteristics                                                                                                                                                        |
@@ -492,22 +499,17 @@ Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of 
 | Transit Gateway        | * For having transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection<br>* One single Gateway to provide this functionality<br>* Works with Direct Connect Gateway, VPN connections |
 
 
-
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
 
-Question 44 Incorrect
+- Question 44 Incorrect
 A multi-national organization has a separate virtual private cloud (VPC) for each of its business units on the AWS Cloud. The organization also wants to connect its **on-premises** data center with the different virtual private clouds (VPC) for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
 
 
-AWS Storage Gateway
-
-AWS Transit Gateway
-
-AWS Direct Connect
-
-VPC peering connection
-
-Internet Gateway
+()AWS Storage Gateway
+()AWS Transit Gateway
+()AWS Direct Connect
+()VPC peering connection
+()Internet Gateway
 
 Answer: AWS Transit Gateway, AWS Direct Connect
 
@@ -658,35 +660,27 @@ Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS La
 A: Correct selection
 Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EC2 Auto Scaling groupsAmazon Elastic Block Store (Amazon EBS), AWS Lambda functions
 
-Question 52 Incorrect
+- Question 52 Incorrect
 An IT company is on a cost-optimization spree and wants to identify all Amazon Elastic Compute Cloud (Amazon EC2) instances that are under-utilized. Which AWS services can be used off-the-shelf to address this use-case without needing any manual configurations? (Select two)
 
-AWS Cost & Usage Report (AWS CUR)
-
+()AWS Cost & Usage Report (AWS CUR)
 Correct selection
-AWS Trusted Advisor
-
+()AWS Trusted Advisor
 Your selection is correct
-AWS Cost Explorer
-
-AWS Budgets
-
+()AWS Cost Explorer
+()AWS Budgets
 Your selection is incorrect
-Amazon CloudWatch
+()Amazon CloudWatch
 
-Question 37 Incorrect
-
+- Question 37 Incorrect
 Which of the following AWS services can be used to forecast your **AWS account usage and costs**?
 
 Your answer is incorrect
-AWS Pricing Calculator
-
-AWS Cost & Usage Report (AWS CUR)
-
+()AWS Pricing Calculator
+()AWS Cost & Usage Report (AWS CUR)
 Correct answer
-AWS Cost Explorer
-
-AWS Budgets
+()AWS Cost Explorer
+()AWS Budgets
 
 [Back to the top](#table-of-contents)
 
