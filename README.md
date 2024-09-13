@@ -495,6 +495,22 @@ Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of 
 
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
 
+Question 44 Incorrect
+A multi-national organization has a separate virtual private cloud (VPC) for each of its business units on the AWS Cloud. The organization also wants to connect its **on-premises** data center with the different virtual private clouds (VPC) for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
+
+
+AWS Storage Gateway
+
+AWS Transit Gateway
+
+AWS Direct Connect
+
+VPC peering connection
+
+Internet Gateway
+
+Answer: AWS Transit Gateway, AWS Direct Connect
+
 [Back to the top](#table-of-contents)
 
 # Security & Compliance
