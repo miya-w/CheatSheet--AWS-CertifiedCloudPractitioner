@@ -369,11 +369,6 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 | Availability Zones            | An Availability Zone (AZ) is one or more discrete **data centers** with redundant power, networking, and connectivity in an AWS Region.|
 | Edge Locations (Points of Presence) | For content delivery as close as possible to users   |
 
-| Category                          | Description                                                                                       |
-|------------------------------------|---------------------------------------------------------------------------------------------------|
-| Regions                           | AWS has the concept of a Region, which is a physical location around the world where data centers are clustered. |
-| Availability Zones                | An Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region. |
-| Edge Locations (Points of Presence)| For content delivery as close as possible to users.                                               |
 
 
 ### Route 53 Routing Policies
@@ -385,12 +380,20 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 
 ## Global Applications in AWS
 - A global application is an application deployed in multiple geographies
-| Global Applications Service | Description                                                                 |
+| Global Applications Service | Description                                                                |
 |----------------------------|-----------------------------------------------------------------------------|
 | Route 53                   | Global Managed DNS (Domain Name System): Great to route users to the closest deployment with least latency. Great for disaster recovery strategies |
 | CloudFront                 | Global Content Delivery Network (CDN): Replicate part of your application to AWS Edge Locations – decrease latency. Cache common requests – improved user experience and decreased latency |
 | S3 Transfer Acceleration   | Increase transfer speed by transferring file to an AWS edge location which will forward the data to the S3 bucket in the target region                     |
 | AWS Global Accelerator     | Improve global application availability and performance using the AWS global network |
+
+| Global Applications Service | Description                                                                                                  |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------|
+| Route 53                    | Global Managed DNS (Domain Name System): Routes users to the closest deployment with the least latency. Great for disaster recovery strategies. |
+| CloudFront                  | Global Content Delivery Network (CDN): Replicates part of your application to AWS Edge Locations to decrease latency. Caches common requests, improving user experience and reducing latency. |
+| S3 Transfer Acceleration     | Increases transfer speed by transferring files to an AWS edge location, which forwards the data to the S3 bucket in the target region. |
+| AWS Global Accelerator       | Improves global application availability and performance using the AWS global network.                       |
+
 
 - edge Location
 A site that CloudFront uses to cache copies of your content for faster delivery to users at any location.
