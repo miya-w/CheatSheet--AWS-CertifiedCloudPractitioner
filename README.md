@@ -125,7 +125,8 @@
 
 
 # Elastic Load Balancing & Auto Scaling Groups Section
-### elastic-load-balancing-auto-scaling-group
+
+### elastic-load-balancing--auto-scaling-group
 
 | Scaling Type         | Description                                                      |
 |----------------------|------------------------------------------------------------------|
@@ -159,10 +160,10 @@
 |                                                            | Scale EC2 instances based on the demand on your system, replace unhealthy instances |
 |                                                            | Integrated with the ELB                                            |
 
-### load balancers offered by AWS:
-• Application Load Balancer (HTTP / HTTPS only) – Layer 7
-• Network Load Balancer (ultra-high performance, allows for TCP) – Layer 4
-• Gateway Load Balancer – Layer 3
+### Load balancers offered by AWS:
+- Application Load Balancer (HTTP / HTTPS only) – Layer 7
+- Network Load Balancer (ultra-high performance, allows for TCP) – Layer 4
+- Gateway Load Balancer – Layer 3
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-ec2-load-balancer.png)
 
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-EBS-EFS.png)
@@ -304,35 +305,23 @@ edge, and migrate data into and out of AWS
 | API Gateway                        | Expose Lambda functions as HTTP API                       |
 
 - Test 3 Question 31
-A startup runs its proprietary application on docker containers. As a Cloud Practitioner, which AWS service would you recommend so that the startup can run containers and still have access to the underlying servers?
+A startup runs its proprietary application on docker containers. As a Cloud Practitioner, which AWS service would you recommend so that the startup **can run containers and still have access** to the underlying servers?
 
-Your answer is incorrect
-AWS Fargate
+   - ()AWS Fargate
+   - ()Amazon Elastic Container Registry (Amazon ECR)
+   - ()AWS Lambda
+   - ()Amazon Elastic Container Service (Amazon ECS)
 
-Amazon Elastic Container Registry (Amazon ECR)
+Correct answer: Amazon Elastic Container Service (Amazon ECS)
 
-AWS Lambda
-
-Correct answer
-Amazon Elastic Container Service (Amazon ECS)
-
-
-Question 60 Incorrect
-
+- Question 60 Incorrect
 AWS Lambda pricing is based on which of the following criteria? (Select two)
 
-The number of lines of code for the AWS Lambda function
-
-The language runtime of the AWS Lambda function
-
-Your selection is correct
-Number of requests for the AWS Lambda function
-
-Your selection is incorrect
-The size of the deployment package for the AWS Lambda function
-Correct selection
-
-The time it takes for the AWS Lambda function to execute
+   - ()The number of lines of code for the AWS Lambda function
+   - ()The language runtime of the AWS Lambda function
+   - ()Number of requests for the AWS Lambda function
+   - ()The size of the deployment package for the AWS Lambda function
+   - ()The time it takes for the AWS Lambda function to execute
 
 
 ** With AWS Lambda, you pay only for what you use. You are charged based on the number of requests for your functions and the duration, the time it takes for your code to execute.** 
