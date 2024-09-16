@@ -380,12 +380,6 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 
 ## Global Applications in AWS
 - A global application is an application deployed in multiple geographies
-| Global Applications Service | Description                                                                |
-|----------------------------|-----------------------------------------------------------------------------|
-| Route 53                   | Global Managed DNS (Domain Name System): Great to route users to the closest deployment with least latency. Great for disaster recovery strategies |
-| CloudFront                 | Global Content Delivery Network (CDN): Replicate part of your application to AWS Edge Locations – decrease latency. Cache common requests – improved user experience and decreased latency |
-| S3 Transfer Acceleration   | Increase transfer speed by transferring file to an AWS edge location which will forward the data to the S3 bucket in the target region                     |
-| AWS Global Accelerator     | Improve global application availability and performance using the AWS global network |
 
 | Global Applications Service | Description                                                                                                  |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -398,12 +392,12 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 - edge Location
 A site that CloudFront uses to cache copies of your content for faster delivery to users at any location.
 
-Test 2 Question 47
+- Test 2 Question 47
 Which AWS service helps with global application availability and performance using the AWS global network?
-- Elastic Load Balancing (ELB)
-- Amazon Route 53
-- AWS Global Accelerator 
-- Amazon CloudFront
+   - ()Elastic Load Balancing (ELB)
+   - ()Amazon Route 53
+   - ()AWS Global Accelerator 
+   - ()Amazon CloudFront
 
 - AWS Global Accelerator (O)
 
@@ -421,20 +415,15 @@ Which AWS service helps with global application availability and performance usi
 | AWS WaveLength   | Brings AWS services to the edge of the 5G networks – Ultra-low latency applications          |
 | AWS Local Zones  | Bring AWS resources (compute, database, storage, ...) closer to your users – Good for latency-sensitive applications |
 
-Test3 Question 41 Incorrect
-
+- Test3 Question 41 
 A company has a static website hosted on an Amazon Simple Storage Service (Amazon S3) bucket in an AWS Region in Asia. Although most of its users are in Asia, now it wants to drive growth globally. How can it improve the global performance of its static website?
 
-Correct answer
-Use Amazon CloudFront to improve the performance of your website
+   - Use Amazon CloudFront to improve the performance of your website
+   - Use AWS Web Application Firewall (AWS WAF) to improve the performance of your website
+   - Use Amazon CloudFormation to improve the performance of your website
+   - Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of your website
 
-Use AWS Web Application Firewall (AWS WAF) to improve the performance of your website
-
-Use Amazon CloudFormation to improve the performance of your website
-
-Your answer is incorrect
-Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of your website
-
+answer: Use Amazon CloudFront to improve the performance of your website
 
 
 
