@@ -282,13 +282,17 @@ edge, and migrate data into and out of AWS
 
 # Other Compute Services, Lambda
 ### other-compute-services
+
+### How does the Docker work 
+![vpc](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/docker-image.jpeg)
+
 | **Feature**                | **Details**                                                      |
 |----------------------------|------------------------------------------------------------------|
 | Docker                     | Container technology to run applications                         |
 | ECS                        | Run Docker containers on EC2 instances                           |
+| ECR                        | Private Docker Images Repository                                 |
 | Fargate                    | Run Docker containers without provisioning the infrastructure     |
 |                            | Serverless offering (no EC2 instances)                           |
-| ECR                        | Private Docker Images Repository                                 |
 | Batch                      | Run batch jobs on AWS across managed EC2 instances               |
 | Lightsail                  | Predictable & low pricing for simple application & DB stacks     |
 
@@ -651,24 +655,24 @@ Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon EC2 Auto Scaling gro
 - Question 52 Incorrect
 An IT company is on a cost-optimization spree and wants to identify all Amazon Elastic Compute Cloud (Amazon EC2) instances that are under-utilized. Which AWS services can be used off-the-shelf to address this use-case without needing any manual configurations? (Select two)
 
-()AWS Cost & Usage Report (AWS CUR)
+   - ()AWS Cost & Usage Report (AWS CUR)
 Correct selection
-()AWS Trusted Advisor
+   - ()AWS Trusted Advisor
 Your selection is correct
-()AWS Cost Explorer
-()AWS Budgets
+   - ()AWS Cost Explorer
+   - ()AWS Budgets
 Your selection is incorrect
-()Amazon CloudWatch
+   - ()Amazon CloudWatch
 
 - Question 37 Incorrect
 Which of the following AWS services can be used to forecast your **AWS account usage and costs**?
 
 Your answer is incorrect
-()AWS Pricing Calculator
-()AWS Cost & Usage Report (AWS CUR)
+   - ()AWS Pricing Calculator
+   - ()AWS Cost & Usage Report (AWS CUR)
 Correct answer
-()AWS Cost Explorer
-()AWS Budgets
+   - ()AWS Cost Explorer
+   - ()AWS Budgets
 
 [Back to the top](#table-of-contents)
 
