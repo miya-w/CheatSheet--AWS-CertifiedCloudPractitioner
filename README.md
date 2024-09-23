@@ -225,6 +225,22 @@ Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnail
 | **Lifecycle transitions**        | Yes                  | Yes                           | No                       | Yes                             | Yes                        | Yes                             | Yes                             | Yes                              |
 
 
+###  S3 Price table
+
+| **Storage Class**                               | **Storage Cost (per GB/month)**                           | **Retrieval Cost (per GB)**            | **Retrieval Speed**         |
+|------------------------------------------------|---------------------------------------------------------|---------------------------------------|----------------------------|
+| S3 Standard                                    | $0.023 (first 50 TB), $0.022 (next 450 TB), $0.021 (over 500 TB) | Free                                  | Immediate                  |
+| S3 Intelligent-Tiering (Frequent Access)       | $0.023                                                  | Varies                                | Immediate or standard      |
+| S3 Intelligent-Tiering (Infrequent Access)     | $0.0125                                                 | Varies                                | Immediate or standard      |
+| S3 Standard-IA                                 | $0.0125                                                 | $0.01                                 | Immediate                  |
+| S3 One Zone-IA                                 | $0.01                                                   | $0.01                                 | Immediate                  |
+| S3 Glacier Instant Retrieval                   | $0.004                                                  | $0.03                                 | Instant                    |
+| S3 Glacier Flexible Retrieval                  | $0.0036                                                 | $0.01 - $0.03                         | Minutes to hours           |
+| S3 Glacier Deep Archive                        | $0.00099                                                | $0.02 (Bulk), $0.10 (Standard)         | Hours (up to 12 hours)     |
+
+
+
+
 [Back to the top](#table-of-contents)
 ### AWS Snow Family
 - Highly-secure, portable devices to collect and process data at the
