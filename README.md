@@ -324,6 +324,16 @@ edge, and migrate data into and out of AWS
 |                                    | Run a Serverless cron job                                 |
 | API Gateway                        | Expose Lambda functions as HTTP API                       |
 
+### serverless
+Serverless is a cloud computing model where you can build and run applications without managing the underlying infrastructure.
+- No Server Management, Automatic Scaling,Pay-as-You-Go,Event-Driven Execution.
+   - Compute: AWS Lambda, AWS Fargate
+   - Storage: S3 (Simple Storage Service),DynamoDB
+   - Data Processing & Analytics: Amazon Kinesis, AWS Glue
+   - Machine Learning: Amazon SageMaker
+   -  Messaging & Notification: Amazon SQS (Simple Queue Service),Amazon SNS (Simple Notification Service)  
+
+
 - Test 3 Question 31
 A startup runs its proprietary application on docker containers. As a Cloud Practitioner, which AWS service would you recommend so that the startup **can run containers and still have access** to the underlying servers?
 
@@ -345,6 +355,8 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 
 
 ** With AWS Lambda, you pay only for what you use. You are charged based on the number of requests for your functions and the duration, the time it takes for your code to execute.** 
+
+
 
 
 [Back to the top](#table-of-contents)
