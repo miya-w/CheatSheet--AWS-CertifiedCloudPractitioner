@@ -173,7 +173,16 @@
 | Amazon EFS (Elastic File System)       | Network File System | - (ex. Google Drive share) <br/> - Ideal for applications that require shared file storage with multiple EC2 instances. <br/> - Automatically replicates data across multiple Availability Zones (AZs) within a region, ensuring high durability and availability. |
 | Amazon EBS (Elastic Block Store)       | Block Storage       | - (ex. your own disk) <br/> - Best suited for single EC2 instance storage, functioning like a hard drive attached to a single instance. <br/> - Data is automatically replicated within the same Availability Zone for durability. Snapshots can be used for backups and are stored in S3, providing added durability across regions. |
 
+- Question 12
+Which of the following is best-suited for load-balancing HTTP and HTTPS traffic?
 
+- ()AWS Auto Scaling
+- ()Network Load Balancer
+- ()Your answer is correct
+- ()Application Load Balancer
+- ()System Load Balancer
+
+answer:Application Load Balancer
 [Back to the top](#table-of-contents)
 
 # S3
@@ -369,7 +378,63 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 | CloudFormation    | (like you write a npm to install all the package)Infrastructure as Code, works with almost all of AWS resources. Repeat across Regions & Accounts.     |
 | Beanstalk         | Platform as a Service (PaaS), limited to certain programming languages or Docker. Deploy code consistently with a known architecture: ex, ALB + EC2 + RDS. |
 | CodeDeploy        | Deploy & upgrade any application onto servers.                                                        |
-| Systems Manager   | Patch, configure, and run commands at scale.                                                          |
+| Systems Manager   | Patch, configure, and run commands at scale. 
+
+### CloudFormation code like
+```yaml
+Parameters:
+  SecurityGroupDescription:
+    Description: Security Group Description
+    Type: String
+
+Resources:
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-a4c7edb2
+      InstanceType: t2.micro
+      SecurityGroups:
+        - !Ref SSHSecurityGroup
+        - !Ref ServerSecurityGroup
+
+  # an elastic IP for our instance
+  MyEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: !Ref MyInstance
+
+  # our EC2 security group
+  SSHSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+      - CidrIp: 0.0.0.0/0
+        FromPort: 22
+        IpProtocol: tcp
+        ToPort: 22
+
+  # our second EC2 security group
+  ServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Ref SecurityGroupDescription
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 192.168.1.1/32
+
+Outputs:
+  ElasticIP:
+    Description: Elastic IP Value
+    Value: !Ref MyEIP
+```                                                       
 
 ### Developer Services
 | Service       | Description                                                                         |
@@ -457,9 +522,14 @@ A company has a static website hosted on an Amazon Simple Storage Service (Amazo
 
 answer: Use Amazon CloudFront to improve the performance of your website
 
+- Test 5 Question 22
+Which of the following services are provided by Amazon Route 53? (Select Two)
+   - Domain registration
+   - Health checks and monitoring
+   - IP routing
+   - Load balancing
 
-
-
+Answer: Domain registration , Health checks and monitoring
 
 [Back to the top](#table-of-contents)
 
@@ -570,7 +640,7 @@ A: AWS WAF
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Purpose                     | Helps with auditing and recording compliance of your AWS resources; records configurations and changes over time.    |
 | Data Storage                | Configuration data can be stored in S3 and analyzed using Athena.                                                   |
-| Questions Addressed         | - Is there unrestricted SSH access to my security groups? <br> - Do my buckets have any public access? <br> - How has my ALB configuration changed over time? |
+| Questions Addressed         | - Is there **unrestricted SSH access** to my security groups? <br> - Do my buckets have any **public access?** <br> - How has my **ALB configuration changed** over time? |
 | Alerts                      | Can receive alerts via SNS notifications for any changes.                                                           |
 | Service Scope               | AWS Config is a per-region service but can be aggregated across regions and accounts.                                |
 
@@ -623,7 +693,16 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 # Account Management, Billing, & Support
 ### account-management-billing--support
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-account-ou.jpg)
-#### Account Best Practices 
+
+### AWS Organizations
+• Global service, allows to manage multiple AWS accounts • The main account is the master account
+• Cost Benefits:
+   - Consolidated Billing across all accounts - single payment method
+   - Pricing benefits from aggregated usage (volume discount for EC2, S3...) 
+   - Pooling of Reserved EC2 instances for optimal savings
+• API is available to **automate AWS account creation**
+• Restrict account privileges using Service Control Policies (SCP)
+
 ### Account Best Practices
 | Task/Feature                   | Description                                                                                           |
 |--------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -704,8 +783,8 @@ Correct answer
 
 [Back to the top](#table-of-contents)
 
-# Well-Architected Framework: 6 Pillars
-
+# Well-Architected Framework: 6 Pillars 
+- (OPR + 2S + C)
 1. **Operational Excellence**
    - Includes the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.
 
