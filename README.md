@@ -20,7 +20,6 @@
 17. [Other](#other)
 
 
-
 # cloud-computing
 | Global Services                | Region-scoped Services                        |
 |--------------------------------|-----------------------------------------------|
@@ -29,6 +28,14 @@
 | CloudFront (Content Delivery Network) | Lambda (Function as a Service)         |
 | WAF (Web Application Firewall) | Rekognition (Software as a Service)           |
 - [AWS Services by Region](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)
+
+Cloud Computing can be broadly divided into three types: 
+1. Infrastructure as a Service (IaaS), ex. AWS EC2 
+2. Platform as a Service (PaaS), ex. AWS Elastic Beanstalk
+3. Software as a Service (SaaS). ex.
+
+- [Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/)
+
 [Back to the top](#table-of-contents)
 
 # AWS IAM Identity & Access Management
