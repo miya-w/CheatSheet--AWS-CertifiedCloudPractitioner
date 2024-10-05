@@ -856,7 +856,7 @@ Correct answer
 | **Training and API Support**            | No                                  | No                                 | Yes                                  | Yes                                    |
 | **Access to Enterprise Concierge**      | No                                  | No                                 | No                                   | Yes                                    |
 
-![trust-advisor](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-trust-advisor.jpg)
+![trust-advisor](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-trust-advisor.png)
 
 - **AWS Trusted Advisor** is a service that provides real-time guidance to help you optimize your AWS infrastructure, improve security and performance, reduce costs, and monitor service limits. It offers best practices and checks across five categories:
 - Cost Optimization
