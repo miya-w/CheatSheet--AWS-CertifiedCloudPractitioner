@@ -33,7 +33,6 @@ Cloud Computing can be broadly divided into three types:
 1. Infrastructure as a Service (IaaS), ex. AWS EC2 
 2. Platform as a Service (PaaS), ex. AWS Elastic Beanstalk
 3. Software as a Service (SaaS). ex.
-
 - [Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/)
 
 [Back to the top](#table-of-contents)
@@ -382,13 +381,15 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 
 | Service           | Description                                                                                           |
 |-------------------|-------------------------------------------------------------------------------------------------------|
-| CloudFormation    | (like you write a npm to install all the package)Infrastructure as Code, works with almost all of AWS resources. Repeat across Regions & Accounts.     |
+| CloudFormation    | (like you write a npm to install all the package) Infrastructure as Code, works with almost all of AWS resources. Repeat across Regions & Accounts.     |
 | Beanstalk         | Platform as a Service (PaaS), limited to certain programming languages or Docker. Deploy code consistently with a known architecture: ex, ALB + EC2 + RDS. |
 | CodeDeploy        | Deploy & upgrade any application onto servers.                                                        |
-| Systems Manager   | Patch, configure, and run commands at scale. 
+| Systems Manager   | Helps you manage your EC2 and On-Premises systems at scale. Another Hybrid AWS service. Get **operational insights** about the state of your infrastructure. Patch, configure, and run commands at scale.  |
+
 
 ### CloudFormation code like
 ```yaml
+#  CloudFormation yaml 
 Parameters:
   SecurityGroupDescription:
     Description: Security Group Description
@@ -453,7 +454,28 @@ Outputs:
 | CodeArtifact  | Store software packages / dependencies on AWS (Work with managed tools, NPM, yarn )                        |
 | CodeStar      | Unified view for allowing developers to do CICD and code                            |
 | Cloud9        | Cloud IDE (Integrated Development Environment) with collaboration features          |
-| AWS CDK       | Define your cloud infrastructure using a programming language                       |
+| AWS CDK       | Define your cloud infrastructure using a **programming language**                       |
+
+### CDK (typescript)
+```typescript
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+
+export class MyCdkAppStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    // Define an S3 bucket
+    new s3.Bucket(this, 'MyFirstBucket', {
+      versioned: true,           // Enable versioning for objects
+      removalPolicy: cdk.RemovalPolicy.DESTROY,  // Automatically delete the bucket when stack is destroyed
+      autoDeleteObjects: true,   // Automatically delete objects when the bucket is removed
+    });
+  }
+}
+
+```
 
 [Back to the top](#table-of-contents)
 
@@ -735,8 +757,9 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 | **Cost Explorer** (Tracking costs in the cloud) | Offers detailed insights and visualizations of your AWS spending patterns over time.             | AWS users who want detailed insights into their AWS spending and need to track costs over time.                   |
 | **Budgets** (Monitoring against cost plans)  | Allows setting budgets and receiving alerts to ensure spending stays within predefined limits.  | AWS users who want to enforce spending limits and receive proactive alerts about their AWS costs.                 |
 
-- You can generate reports, visualize trends, and use forecasting models to **estimate future usage and spending** basing on the current useage.
-
+- AWS Cost Explorer : You can generate reports, visualize trends, and use forecasting models to **estimate future usage and spending** basing on the current useage.
+- AWS Cost Explorer uses historical data, analyzes it against different Savings Plan models, and provides clear recommendations to help you choose the plan that best suits your usage patterns and can save you the most money.
+- example : If your EC2 instance usage is consistent over time, AWS Cost Explorer might recommend a Compute Savings Plan with a 1-year term and "Partial Upfront" payment, showing you the exact amount of savings compared to your current pay-as-you-go costs.
 
 | Billing and Costing Tools       | Summary |
 |---------------------------------|---------|
