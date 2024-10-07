@@ -813,6 +813,9 @@ Correct answer
 
 [Back to the top](#table-of-contents)
 
+
+## other
+
 # Well-Architected Framework: 6 Pillars 
 - (OPR + 2S + C)
 1. **Operational Excellence**
