@@ -32,7 +32,7 @@
 Cloud Computing can be broadly divided into three types: 
 1. Infrastructure as a Service (IaaS), ex. AWS EC2 
 2. Platform as a Service (PaaS), ex. AWS Elastic Beanstalk
-3. Software as a Service (SaaS). ex.
+3. Software as a Service (SaaS). ex. Lambda
 - [Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/)
 
 [Back to the top](#table-of-contents)
@@ -844,7 +844,7 @@ Correct answer
 |-----------------------------------------|-------------------------------------|------------------------------------|--------------------------------------|----------------------------------------|
 | **Pricing**                             | Free                                | $29/month (or 3% of monthly usage) | $100/month (or 10% of monthly usage) | $15,000/month (or 10% of monthly usage) |
 | **24/7 Support**                        | No                                  | No                                 | Yes                                  | Yes                                    |
-| **Access to Cloud Support Engineers**   | No                                  | Business Hours                     | 24/7 phone, web , and chat                                  | 24/7 phone, web , and chat                                   |
+| **Access to Cloud Support Engineers**   | No                                  | Business Hours                     | 24/7 phone, web , and chat           | 24/7 phone, web, and chat              |
 | **Response Time**                       | None                                | < 24 business hours                | < 1 hour for urgent issues           | < 15 minutes for critical issues       |
 | **Support for Third-Party Software**    | No                                  | No                                 | Yes                                  | Yes                                    |
 | **IAM Support**                         | No                                  | No                                 | Yes                                  | Yes                                    |
@@ -852,7 +852,7 @@ Correct answer
 | **Personal Health Dashboard**           | Yes                                 | Yes                                | Yes                                  | Yes                                    |
 | **Architectural Guidance**              | No                                  | General Guidance                   | Contextual Guidance                  | Consultative Review                    |
 | **Infrastructure Event Management**     | No                                  | No                                 | Yes (Additional fee)                 | Yes                                    |
-| **Technical Account Manager (TAM)**     | No                                  | No                                 | No                                   | Yes                                    |
+| **Technical Account Manager (TAM)**     | No                                  | No                                 | No                                   | **Yes**                                |
 | **Well-Architected Reviews**            | No                                  | No                                 | Yes                                  | Yes                                    |
 | **Operations Reviews**                  | No                                  | No                                 | No                                   | Yes                                    |
 | **Proactive Guidance**                  | No                                  | No                                 | No                                   | Yes                                    |
