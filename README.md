@@ -320,8 +320,8 @@ edge, and migrate data into and out of AWS
 | **Feature**                | **Details**                                                      |
 |----------------------------|------------------------------------------------------------------|
 | Docker                     | Container technology to run applications                         |
-| ECS                        | Run Docker containers on EC2 instances                           |
-| ECR                        | Private Docker Images Repository                                 |
+| ECS Elastic Container Service | Run Docker containers on EC2 instances                           |
+| ECR Elastic Container Registry| Private Docker Images Repository                                 |
 | Fargate                    | Run Docker containers without provisioning the infrastructure     |
 |                            | Serverless offering (no EC2 instances)                           |
 | Batch                      | Run batch jobs on AWS across managed EC2 instances               |
@@ -760,6 +760,7 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 - AWS Cost Explorer : You can generate reports, visualize trends, and use forecasting models to **estimate future usage and spending** basing on the current useage.
 - AWS Cost Explorer uses historical data, analyzes it against different Savings Plan models, and provides clear recommendations to help you choose the plan that best suits your usage patterns and can save you the most money.
 - example : If your EC2 instance usage is consistent over time, AWS Cost Explorer might recommend a Compute Savings Plan with a 1-year term and "Partial Upfront" payment, showing you the exact amount of savings compared to your current pay-as-you-go costs.
+- AWS Budgets : 4 types of budgets: Usage, Cost, Reservation, Savings Plans
 
 | Billing and Costing Tools       | Summary |
 |---------------------------------|---------|
@@ -772,7 +773,11 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 | Service Quotas                  | Notifies you when you’re close to service quota threshold |
 
 ex. AWS Compute Optimizer delivers recommendations for which of the following AWS resources?
-Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Amazon EBS volumes, AWS Lambda functions, Amazon ECS services running on Fargate.
+1. Amazon EC2 instances, 
+2. Amazon EC2 Auto Scaling groups, 
+3. Amazon EBS volumes, 
+4. AWS Lambda functions, 
+5. Amazon ECS services running on Fargate.
 
 - Question: AWS Compute Optimizer delivers recommendations for which of the following AWS resources? (Select two)
 
