@@ -443,6 +443,16 @@ Outputs:
     Description: Elastic IP Value
     Value: !Ref MyEIP
 ```                                                       
+### Beanstalk
+
+AWS Elastic Beanstalk is a platform-as-a-service (PaaS) offering from Amazon Web Services that allows you to deploy and manage applications in various programming languages such as Java, .NET, Node.js, Python, Ruby, Go, and Docker. With Elastic Beanstalk, you only need to upload your application code, and AWS will take care of the deployment, including creating the necessary resources like EC2 instances, S3 buckets, and more
+
+Key features include:
+
+- Automatic scaling
+- **Built-in monitoring with Amazon CloudWatch**
+- Easy integration with other AWS services
+- Support for rolling updates and environment cloning
 
 ### Developer Services
 | Service       | Description                                                                         |
