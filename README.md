@@ -456,7 +456,7 @@ Key features include:
 - Easy integration with other AWS services
 - Support for rolling updates and environment cloning
 
-![codePipeline]()
+![codePipeline](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-deploy-codePipeline.png)
 
 ### Developer Services
 | Service       | Description                                                                         |
