@@ -564,6 +564,8 @@ A company has a static website hosted on an Amazon Simple Storage Service (Amazo
    - Use Amazon S3 Transfer Acceleration (Amazon S3TA) to improve the performance of your website
 
 answer: Use Amazon CloudFront to improve the performance of your website
+- Why not Amazon S3 Transfer Acceleration (S3TA)?
+Amazon S3 Transfer Acceleration (S3TA) is designed to improve data upload and download speeds to S3 buckets by routing the data through AWS edge locations. However, it primarily benefits data transfer into and out of the S3 bucket (e.g., for users uploading large files or accessing large files from far regions).
 
 - Test 5 Question 22
 Which of the following services are provided by Amazon Route 53? (Select Two)
@@ -573,6 +575,34 @@ Which of the following services are provided by Amazon Route 53? (Select Two)
    - Load balancing
 
 Answer: Domain registration , Health checks and monitoring
+
+- Test 6 Question 9
+Which of the following statements are true about AWS Regions and Availability Zones (AZ)? (Select two)
+
+- AWS calls each group of logical data centers as AWS Regions
+- Traffic between Availability Zones (AZ) is not encrypted by default, but can be configured from AWS console
+- An Availability Zone (AZ) is a physical location where AWS clusters the data centers
+- All traffic between Availability Zones (AZ) is encrypted
+- Each AWS Region consists of multiple, isolated, and physically separate Availability Zones (AZ) within a geographic area
+
+Answer:  
+1. All traffic between Availability Zones (AZ) is encrypted
+2. Each AWS Region consists of multiple, isolated, and physically separate Availability Zones (AZ) within a geographic area
+—
+Your selection is incorrect
+An Availability Zone (AZ) is a physical location where AWS clusters the data centers
+
+In the AWS document, An Availability Zone (AZ) is **ne or more discrete data centers with redundant power, networking, and connectivity in an AWS Region** . It didn’t mention physical location. 
+However, AWS has the concept of a Region, which is a **physical location** around the world where we cluster data centers.
+
+Ex. 
+Australia has two Regions : Sydney and Melbourne
+
+Australia (Sydney) Region has Availability Zones: 3, Launched 2012
+Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
+
+- [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/?p=ngi&loc=2)
+
 
 [Back to the top](#table-of-contents)
 
@@ -650,6 +680,17 @@ Answer: AWS Transit Gateway, AWS Direct Connect
 
 # Security & Compliance
 ### security--compliance
+
+## AWS Shared Responsibility Model
+![AWS-share-responbility]()
+### AWS responsibility - Security **of** the Cloud
+• Protecting infrastructure (hardware, software, facilities, and networking) that runs all the AWS services
+• Managed services like S3, DynamoDB, RDS, etc.
+### Customer responsibility - Security **in** the Cloud
+• For EC2 instance, customer is responsible for management of the guest OS (including security patches and updates), firewall & network configuration, IAM
+• Encrypting application data • Shared controls:
+• Patch Management, Configuration Management, Awareness & Training
+
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-sectury-firewall.jpg)
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-sectury-firewall-manager.jpg)
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-secturity-architecture.png)
