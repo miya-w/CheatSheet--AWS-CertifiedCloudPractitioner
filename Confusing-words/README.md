@@ -44,7 +44,7 @@ Ideal for startups, small teams, or applications with unpredictable or varying t
 —————————————
 ### VPC Gateway Endpoint  vs.  interface endpoint
 
-![endpoints]()
+![endpoints](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/Confusing-words/images/aws-vpc-endpoints.png)
 AWS VPC Endpoints Explained
 
  Endpoints allow you to connect to AWS Services using a private network instead of the public www network
@@ -70,19 +70,17 @@ There are two main types of VPC Endpoints:
 | **Cost**               | Charges for data transfer and hourly     | Free                                |
 | **Network Type**       | Operates over AWS PrivateLink            | Operates over the VPC route table   |
 
+### on-premise connection gateway
 
-
-
-- AWS Storage Gateway
+- **AWS Storage Gateway**
 	- Bridge between *on-premise* data and *cloud data* in S3 
 	- Hybrid storage service to allow on- premises to seamlessly use the AWS Cloud 
 	- Use cases: disaster recovery, backup & restore, tiered storage 
     - 
 - **AWS Transit Gateway**
     - centralized network management and interconnectivity across multiple VPCs or hybrid on-premises environments
-
-
-
+---
+### Lambda
 
 - **API Gateway**
     - Expose Lambda functions as HTTP API
