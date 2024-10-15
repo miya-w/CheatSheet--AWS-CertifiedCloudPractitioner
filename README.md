@@ -86,9 +86,9 @@ Cloud Computing can be broadly divided into three types:
 #### amazon-ec2-instance-storage
 | EC2 Instance Storage – Summary                             | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
-| EBS volumes  EBS (Elastic Block Store)                     | Network drives attached to one EC2 instance at a time              |
-|                                                            |  It’s locked to an Availability Zone (AZ)                                 |
-|                                                            | Can use EBS Snapshots for backups / transferring EBS volumes across AZ |
+| EBS volumes  EBS (Elastic Block Store)                     | 1. Network drives attached to one EC2 instance at a time              |
+|                                                            | 2. It’s locked to an Availability Zone (AZ)                                 |
+|                                                            | 3. Can use EBS Snapshots for backups / transferring EBS volumes across AZ |
 | AMI(Amazon machine image)                                  | Create ready-to-use EC2 instances with our customizations          |
 | EC2 Image Builder                                          | Automatically build, test, and distribute AMIs                     |
 | EC2 Instance Store                                         | High-performance hardware disk attached to our EC2 instance        |
@@ -188,7 +188,7 @@ Which of the following is best-suited for load-balancing HTTP and HTTPS traffic?
 - ()Application Load Balancer
 - ()System Load Balancer
 
-answer:Application Load Balancer
+- answer:Application Load Balancer
 [Back to the top](#table-of-contents)
 
 # S3
@@ -207,23 +207,6 @@ answer:Application Load Balancer
 | OpsHub                                                    | Desktop application to manage Snow Family devices                           |
 | Storage Gateway                                           | Hybrid solution to extend on-premises storage to S3                         |
 
-Question 10
-
-A photo sharing web application wants to store thumbnails of user-uploaded images on Amazon Simple Storage Service (Amazon S3). The thumbnails are rarely used but need to be immediately accessible from the web application. The thumbnails can be regenerated easily if they are lost. Which is the most cost-effective way to store these thumbnails on Amazon Simple Storage Service (Amazon S3)?
-
-Use Amazon S3 Standard to store the thumbnails
-
-Use Amazon S3 Glacier Flexible Retrieval to store the thumbnails
-
-Your answer is incorrect
-Use Amazon S3 Standard-Infrequent Access (S3 Standard-IA) to store the thumbnails
-
-Correct answer
-Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnails
-
-
-
-- snow family: AWS Snowcone,  AWS Snowball, AWS Snowmobile
 
 
 ## Performance across the S3 storage classes
@@ -239,6 +222,17 @@ Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnail
 | **Retrieval charge**             | N/A                  | N/A                           | N/A                      | per GB retrieved               | per GB retrieved           | per GB retrieved               | per GB retrieved               | per GB retrieved               |
 | **Lifecycle transitions**        | Yes                  | Yes                           | No                       | Yes                             | Yes                        | Yes                             | Yes                             | Yes                              |
 
+| Feature                            | Use cases                                                                                             | First byte latency            | Durability                    | Designed for availability     | Availability SLA              | Availability Zones            | Minimum storage duration charge  | Retrieval charge           | Lifecycle transitions       |
+|------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------|-------------------------------|-------------------------------|-------------------------------|-------------------------------|----------------------------------|-----------------------------|-----------------------------|
+| **S3 Standard**                    | General purpose storage for frequently accessed data                                                   | milliseconds                  | 99.999999999% (11 nines)       | 99.99%                        | 99.9%                         | ≥3                             | N/A                              | N/A                         | Yes                         |
+| **S3 Intelligent-Tiering**         | Automatic cost savings for data with unknown or changing access patterns                               | milliseconds                  | 99.999999999% (11 nines)       | 99.9%                         | 99%                           | ≥3                             | N/A                              | N/A                         | Yes                         |
+| **S3 Express One Zone**            | High performance storage for your most frequently accessed data                                        | single-digit milliseconds     | 99.999999999% (11 nines)       | 99.95%                        | 99.9%                         | 1                              | 1 hour                           | N/A                         | No                          |
+| **S3 Standard-IA**                 | Infrequently accessed data that needs millisecond access                                               | milliseconds                  | 99.999999999% (11 nines)       | 99.9%                         | 99%                           | ≥3                             | 30 days                          | per GB retrieved             | Yes                         |
+| **S3 One Zone-IA**                 | Re-creatable infrequently accessed data                                                               | milliseconds                  | 99.999999999% (11 nines)       | 99.5%                         | 99%                           | 1                              | 30 days                          | per GB retrieved             | Yes                         |
+| **S3 Glacier Instant Retrieval**   | Long-lived data that is accessed a few times per year with instant retrievals                          | milliseconds                  | 99.999999999% (11 nines)       | 99.9%                         | 99%                           | ≥3                             | 90 days                          | per GB retrieved             | Yes                         |
+| **S3 Glacier Flexible Retrieval**  | Backup and archive data that is rarely accessed and low cost                                           | minutes or hours              | 99.999999999% (11 nines)       | 99.99%                        | 99.9%                         | ≥3                             | 90 days                          | per GB retrieved             | Yes                         |
+| **S3 Glacier Deep Archive**        | Archive data that is very rarely accessed and very low cost                                            | hours                         | 99.999999999% (11 nines)       | 99.99%                        | 99.9%                         | ≥3                             | 180 days                         | per GB retrieved             | Yes                         |
+
 
 ###  S3 Price table
 
@@ -253,10 +247,21 @@ Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnail
 | S3 Glacier Flexible Retrieval                  | $0.0036                                                 | $0.01 - $0.03                         | Minutes to hours           |
 | S3 Glacier Deep Archive                        | $0.00099                                                | $0.02 (Bulk), $0.10 (Standard)         | Hours (up to 12 hours)     |
 
+Question 10
 
+A photo sharing web application wants to store thumbnails of user-uploaded images on Amazon Simple Storage Service (Amazon S3). The thumbnails are rarely used but need to be immediately accessible from the web application. The thumbnails can be regenerated easily if they are lost. Which is the most cost-effective way to store these thumbnails on Amazon Simple Storage Service (Amazon S3)?
+
+- Use Amazon S3 Standard to store the thumbnails- 
+- Use Amazon S3 Glacier Flexible Retrieval to store the thumbnails
+- Use Amazon S3 Standard-Infrequent Access (S3 Standard-IA) to store the thumbnails
+- Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnails
+
+Correct answer
+Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnails
 
 
 [Back to the top](#table-of-contents)
+
 ### AWS Snow Family
 - Highly-secure, portable devices to collect and process data at the
 edge, and migrate data into and out of AWS
