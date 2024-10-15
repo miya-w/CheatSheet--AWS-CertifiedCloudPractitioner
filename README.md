@@ -87,7 +87,7 @@ Cloud Computing can be broadly divided into three types:
 | EC2 Instance Storage – Summary                             | Description                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------|
 | EBS volumes  EBS (Elastic Block Store)                     | Network drives attached to one EC2 instance at a time              |
-|                                                            | Mapped to an Availability Zone                                     |
+|                                                            |  It’s locked to an Availability Zone (AZ)                                 |
 |                                                            | Can use EBS Snapshots for backups / transferring EBS volumes across AZ |
 | AMI(Amazon machine image)                                  | Create ready-to-use EC2 instances with our customizations          |
 | EC2 Image Builder                                          | Automatically build, test, and distribute AMIs                     |
@@ -682,7 +682,8 @@ Answer: AWS Transit Gateway, AWS Direct Connect
 ### security--compliance
 
 ## AWS Shared Responsibility Model
-![AWS-share-responbility]()
+![AWS-share-responbility](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-Shared%20Responsibility%20Model%20diagram.png)
+- [aws-Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 ### AWS responsibility - Security **of** the Cloud
 • Protecting infrastructure (hardware, software, facilities, and networking) that runs all the AWS services
 • Managed services like S3, DynamoDB, RDS, etc.
