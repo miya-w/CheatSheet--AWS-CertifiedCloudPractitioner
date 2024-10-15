@@ -255,11 +255,13 @@ Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnail
 ### AWS Snow Family
 - Highly-secure, portable devices to collect and process data at the
 edge, and migrate data into and out of AWS
+
 | AWS Snow Family Device   | Use Case                                                                                                 | Storage Capacity                       | Features                                                                                                 | Size                         |
 |--------------------------|----------------------------------------------------------------------------------------------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------|
 | **AWS Snowcone**          | Small, portable, rugged device for edge computing, data collection, and data transfer in limited space, power, or connectivity environments. | 8 TB of usable storage                 | Supports local computing with AWS IoT Greengrass or Amazon EC2 instances for edge processing and data transfer to AWS. | Lightweight (weighs about 4.5 pounds), making it easy to transport. |
 | **AWS Snowball Edge**     | Larger capacity device for petabyte-scale data transfer and edge computing in disconnected or edge environments. | Up to 80 TB of usable storage per device | - **Storage Optimized**: Primarily used for data storage and migration. <br> - **Compute Optimized**: Equipped for high-performance computing at the edge. | - |
 | **AWS Snowmobile**        | A massive-scale data transfer service designed to move extremely large datasets (exabytes) to AWS.         | Up to 100 petabytes (PB) per Snowmobile | Snowmobile is a ruggedized shipping container pulled by a semi-truck, ideal for migrating large data centers or large-scale archives to AWS. | - |
+
 
 #### AWS OpsHub
 • Historically, to use Snow Family devices, you needed a CLI (Command Line Interface tool)
