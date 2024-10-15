@@ -361,6 +361,14 @@ A startup runs its proprietary application on docker containers. As a Cloud Prac
    - ()Amazon Elastic Container Service (Amazon ECS)
 
 Correct answer: Amazon Elastic Container Service (Amazon ECS)
+Explanation:
+Amazon ECS is a highly scalable, high-performance container orchestration service that supports Docker containers. ECS allows users to run and manage containers on a cluster of Amazon EC2 instances, providing access to the underlying servers if needed. This is ideal for scenarios where you need control over the EC2 instances running the containers.
+
+Incorrect options:
+
+- AWS Fargate: It allows running containers without managing the underlying infrastructure (no access to servers), so it wouldn’t meet the requirement to have access to the underlying servers.
+- Amazon Elastic Container Registry (Amazon ECR): This is a fully managed container registry to store, manage, and deploy container images but does not orchestrate or run containers.
+- AWS Lambda: This is a serverless computing service that automatically runs your code in response to events, but it’s not for running Docker containers with access to underlying servers.
 
 - Question 60 Incorrect
 AWS Lambda pricing is based on which of the following criteria? (Select two)
@@ -543,6 +551,8 @@ Which AWS service helps with global application availability and performance usi
    - ()Amazon CloudFront
 
 - AWS Global Accelerator (O)
+IP Routing: Handles the actual transfer of data between devices, relying on IP addresses and routers.
+DNS Routing: Translates domain names into IP addresses, enabling users to access websites without knowing their IP addresses.
 
 | Feature                     | **CloudFront**                                                                 | **S3 Cross Region Replication**                                               |
 |---------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -658,6 +668,7 @@ Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
 ### On-Premises Connection
 ![on-premises](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-vpc-on-premises.png)
 
+#### On-Premises Connection
 | On-Premises Connection | Details |
 |------------------------|---------|
 | Site to Site VPN       | * Connect an on-premises VPN to AWS<br>* The connection is automatically encrypted<br>* Goes over the public internet |
@@ -667,15 +678,13 @@ Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
 
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
 
-- Question 44 Incorrect
+- Question 44 
 A multi-national organization has a separate virtual private cloud (VPC) for each of its business units on the AWS Cloud. The organization also wants to connect its **on-premises** data center with the different virtual private clouds (VPC) for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
-
-
-()AWS Storage Gateway
-()AWS Transit Gateway
-()AWS Direct Connect
-()VPC peering connection
-()Internet Gateway
+- ()AWS Storage Gateway
+- ()AWS Transit Gateway
+- ()AWS Direct Connect
+- ()VPC peering connection
+- ()Internet Gateway
 
 Answer: AWS Transit Gateway, AWS Direct Connect
 
