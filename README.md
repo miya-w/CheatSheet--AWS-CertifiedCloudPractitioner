@@ -516,8 +516,8 @@ export class MyCdkAppStack extends cdk.Stack {
 
 | Category                      | Description**                                      |
 |-----------------------------------|------------------------------------------------------|
-| Regions                       | AWS has the concept of a Region, which is a physical location around the world where we cluster data centers.        |
-| Availability Zones            | An Availability Zone (AZ) is one or more discrete **data centers** with redundant power, networking, and connectivity in an AWS Region.|
+| Regions                       | AWS has the concept of a Region, which is a **physical location** around the world where we cluster data centers.  Each AWS Region consists of **a minimum of three**, isolated, and physically separate AZs within a geographic area.       |
+| Availability Zones            | An Availability Zone (AZ) is **one or more** discrete **data centers** with redundant power, networking, and connectivity in an AWS Region.|
 | Edge Locations (Points of Presence) | For content delivery as close as possible to users   |
 
 
