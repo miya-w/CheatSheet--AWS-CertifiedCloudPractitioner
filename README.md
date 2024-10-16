@@ -129,6 +129,14 @@ Cloud Computing can be broadly divided into three types:
 |                                                           | May share hardware with other instances in the same account                                                    |                                                                                                 |
 | Capacity Reservations                                      | Reserve capacity in a specific AZ for any duration                                                             | You book a room for a period with full price even if you don’t stay in it                       |
 
+Summary of Time-Based EC2 Pricing:
+- On-Demand: Billed by the **second** or hour (with a **minimum of 60 seconds**).
+- Reserved Instances: Pay upfront or per hour based on 1- or 3-year commitments.
+- Spot Instances: Billed by the second or hour, depending on availability and duration of use.
+- Savings Plans: Commitment-based billing (1 or 3 years), but offers flexible billing across compute services.
+- Dedicated Hosts: Billed by the **hour** for a physical server.
+
+
 
 # Elastic Load Balancing & Auto Scaling Groups Section
 
@@ -637,12 +645,32 @@ Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
 
 | Service                     | Description                                                                                                              |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| CloudWatch                  | Metrics: Monitor the performance of AWS services and billing metrics. Alarms: Automate notification, perform EC2 action, notify to SNS based on metric. Logs: Collect log files from EC2 instances, servers, Lambda functions... Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule. |
-| CloudTrail                  | Audit API calls made within your AWS account. CloudTrail Insights: Automated analysis of your CloudTrail Events.          |
+| CloudWatch                  | Metrics: Monitor the **performance of AWS services** and **billing metrics**. Alarms: Automate notification, perform EC2 action, notify to SNS based on metric. Logs: Collect log files from EC2 instances, servers, Lambda functions... Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule. |
+| CloudTrail                  | Audit **API calls**, **logging** made within your AWS account. CloudTrail Insights: Automated analysis of your CloudTrail Events. It captures information about the who, when, and what of actions performed on AWS services.          |
 | X-Ray                       | Trace requests made through your distributed applications.                                                                |
 | AWS Health Dashboard        | Status of all AWS services across all regions.                                                                            |
 | AWS Account Health Dashboard| AWS events that impact your infrastructure.                                                                               |
 | Amazon CodeGuru             | Automated code reviews and application performance recommendations.                                                       |
+
+####  CloudTrail  vs. CloudWatch   
+| Feature           | CloudTrail                                 | CloudWatch                               |
+|-------------------|--------------------------------------------|------------------------------------------|
+| Purpose           | API call tracking and auditing             | Performance and operational monitoring   |
+| Data Collected    | Collects API calls made within your AWS account. This includes actions such as creating, deleting, or modifying AWS resources (e.g., creating an EC2 instance or changing S3 bucket permissions).              |  Collects metrics and log data. Metrics include things like CPU utilization of an EC2 instance, memory usage, or disk reads/writes. It can also collect custom metrics that you define for your applications and log data like error messages, request logs, and application logs.    |
+| Use Case          | Auditing, compliance, forensics            | Resource monitoring, performance, alerts |
+| Retention         | 90 days default (S3 for long-term)         | 15 months (metrics), logs as per retention |
+| Cost              | Pay for trails and S3 storage              | Pay for metrics, alarms, and log storage |
+| Scope             | AWS-wide (all regions if specified)        | Resource-specific metrics and logs       |
+
+#### Use Cases:
+CloudTrail:
+- Security Auditing: Tracks who accessed or modified resources and what actions were taken.
+- Compliance Monitoring: Helps ensure that your AWS account is in compliance with industry regulations by providing audit trails of actions.
+- Forensics: Investigate incidents by reviewing historical activity logs and understanding who made changes and when.
+CloudWatch:
+- Monitoring Performance: Provides insight into the operational health and performance of your AWS resources and applications.
+- Alerting: Set up alarms based on thresholds (e.g., CPU utilization above 80%) to notify you or trigger automated responses like scaling or restarting an instance.
+- Log Analysis: Collect and analyze log files from applications, infrastructure, or AWS services like Lambda, API Gateway, or EC2.
 
 [Back to the top](#table-of-contents)
 
@@ -671,8 +699,8 @@ Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
 #### On-Premises Connection
 | On-Premises Connection | Details |
 |------------------------|---------|
-| Site to Site VPN       | * Connect an on-premises VPN to AWS<br>* The connection is automatically encrypted<br>* Goes over the public internet |
-| Direct Connect (DX)    | * Establish a physical connection between on-premises and AWS<br>* The connection is private, secure, and fast<br>* Goes over a private network<br>* Takes at least a month to establish |
+| 1. Site to Site VPN       | * Connect an on-premises VPN to AWS<br>* The connection is automatically encrypted<br>* Goes over the public internet |
+| 2. Direct Connect (DX)    | * Establish a physical connection between on-premises and AWS<br>* The connection is private, secure, and fast<br>* Goes over a private network<br>* Takes at least a month to establish |
 | Transit Gateway        | * For having transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection<br>* One single Gateway to provide this functionality<br>* Works with Direct Connect Gateway, VPN connections |
 
 
@@ -712,9 +740,9 @@ Answer: AWS Transit Gateway, AWS Direct Connect
 
 | Service                      | Purpose                                                   | Layer Protected                   | Key Features, Use Cases, and Integration Points                                                                                                                                                                |
 |------------------------------|-----------------------------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AWS Shield                   | DDoS protection                                           | Network and Transport (Layer 3/4) | - Automatic protection against DDoS attacks <br> - Two tiers: Standard and Advanced <br> - Advanced provides near real-time attack visibility and access to AWS DDoS Response Team (DRT) <br> - Protects against large-scale DDoS attacks <br> - Basic protection for all AWS services <br> - Automatically integrated with AWS services like CloudFront, Route 53, and Elastic Load Balancing |
-| AWS Network Firewall         | Network-level protection within VPCs (Protect your entire Amazon VPC)                    | Network (Layer 3/4)               | - Stateful traffic inspection <br> - Intrusion prevention <br> - Web filtering to block malicious traffic <br> - Fine-grained control over network traffic <br> - Enforces network policies within VPCs <br> - Blocks or allows specific traffic based on IP, protocols, and ports <br> - Provides deeper packet inspection <br> - Integrates with VPCs (Virtual Private Cloud), Transit Gateway |
-| AWS WAF (Web Application Firewall) | Protects web applications from common web exploits        | Application (Layer 7)             | - Define rules to block common attack patterns like SQL injection and XSS <br> - Integration with CloudFront, ALB, API Gateway <br> - Managed rule groups for quick setup <br> - Protects web applications from specific threats like SQL injection and XSS <br> - Customized security rules <br> - Integrates with CloudFront (CDN), Application Load Balancer (ALB), API Gateway |
+| AWS Shield                   | DDoS protection                                           | Network and Transport (Layer 3/4) | - Automatic protection against DDoS attacks <br> - Two tiers: Standard and Advanced <br> - Advanced provides near real-time attack visibility and access to AWS DDoS Response Team (DRT) <br> - Protects against large-scale DDoS attacks <br> - Basic protection for all AWS services <br> - Automatically integrated with AWS services like **CloudFront**, **Route 53**, and **Elastic Load Balancing** |
+| AWS Network Firewall         | Network-level protection within VPCs (Protect your entire Amazon VPC)                    | Network (Layer 3/4)               | - Stateful traffic inspection <br> - Intrusion prevention <br> - Web filtering to block malicious traffic <br> - Fine-grained control over network traffic <br> - Enforces network policies within VPCs <br> - **Blocks or allows** specific traffic **based on IP, protocols, and ports** <br> - Provides deeper packet inspection <br> - Integrates with VPCs (Virtual Private Cloud), Transit Gateway |
+| AWS WAF (Web Application Firewall) | Protects web applications from common web exploits        | Application (Layer 7)             | - Define rules to block common attack patterns like **SQL injection and XSS** <br> - Integration with CloudFront, ALB, API Gateway <br> - Managed rule groups for quick setup <br> - Protects web applications from specific threats like SQL injection and XSS <br> - Customized security rules <br> - Integrates with CloudFront (CDN), Application Load Balancer (ALB), API Gateway |
 
 
 
