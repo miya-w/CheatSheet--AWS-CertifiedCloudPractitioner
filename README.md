@@ -32,7 +32,7 @@
 Cloud Computing can be broadly divided into three types: 
 1. Infrastructure as a Service (IaaS), ex. AWS EC2 
 2. Platform as a Service (PaaS), ex. AWS Elastic Beanstalk
-3. Software as a Service (SaaS). ex. Lambda
+3. Software as a Service (SaaS). ex. Gmail
 - [Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/)
 
 [Back to the top](#table-of-contents)
@@ -89,14 +89,19 @@ Cloud Computing can be broadly divided into three types:
 | EBS volumes  EBS (Elastic Block Store)                     | 1. Network drives attached to one EC2 instance at a time              |
 |                                                            | 2. It’s locked to an Availability Zone (AZ)                                 |
 |                                                            | 3. Can use EBS Snapshots for backups / transferring EBS volumes across AZ |
-| AMI(Amazon machine image)                                  | Create ready-to-use EC2 instances with our customizations          |
-| EC2 Image Builder                                          | Automatically build, test, and distribute AMIs                     |
 | EC2 Instance Store                                         | High-performance hardware disk attached to our EC2 instance        |
 |                                                            | Lost if our instance is stopped / terminated                       |
 | EFS(Elastic File System)                                   |Manage NFS(Network file system), can be attached to 100s of instances in a region |
 | EFS-IA                                                     | Cost-optimized storage class for infrequently accessed files       |
 | FSx for Windows                                            | Network File System for Windows servers                            |
 | FSx for Lustre                                             | High Performance Computing Linux file system                       |
+
+### AMI
+| AMI (Amazon Machine Image) | Create ready-to-use EC2 instances with our customizations |
+|----------------------------|----------------------------------------------------------|
+| EC2 Image Builder           | Automatically build, test, and distribute AMIs           |
+
+- you can buy Amazon Machine Images (AMIs) in the AWS Marketplace.
 
 [Back to the top](#table-of-contents)
 
