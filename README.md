@@ -186,11 +186,18 @@ Summary of Time-Based EC2 Pricing:
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-ec2-load-balancer.png)
 
 ![](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-EBS-EFS.png)
-### compare EBS and EFS
-| Service                               | Type                | Characteristics                                                                                                                                                        |
-|---------------------------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Amazon EFS (Elastic File System)       | Network File System | - (ex. Google Drive share) <br/> - Ideal for applications that require shared file storage with multiple EC2 instances. <br/> - Automatically replicates data across multiple Availability Zones (AZs) within a region, ensuring high durability and availability. |
-| Amazon EBS (Elastic Block Store)       | Block Storage       | - (ex. your own disk) <br/> - Best suited for single EC2 instance storage, functioning like a hard drive attached to a single instance. <br/> - Data is automatically replicated within the same Availability Zone for durability. Snapshots can be used for backups and are stored in S3, providing added durability across regions. |
+### compare EBS, EFS, instance store 
+| Service                          | Type                  | Characteristics                                                                                                                |
+|-----------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| Amazon EFS (Elastic File System)  | Network File System   | - (ex. Google Drive share)                                                                                                     |
+|                                   |                       | - Ideal for applications that require shared file storage with multiple EC2 instances.                                          |
+|                                   |                       | - Automatically replicates data across multiple Availability Zones (AZs) within a region, ensuring high durability and availability. |
+| Amazon EBS (Elastic Block Store)  | Block Storage         | - (ex. your own disk)                                                                                                          |
+|                                   |                       | - Best suited for single EC2 instance storage, functioning like a hard drive attached to a single instance.                    |
+|                                   |                       | - Data is automatically replicated within the same Availability Zone for durability. Snapshots can be used for backups and are stored in S3, providing added durability across regions. |
+| Instance Store                    | Ephemeral Block Storage | - Temporary storage that is physically attached to the host machine where the EC2 instance runs.                                |
+|                                   |                       | - Offers very high IOPS and low latency, but data is lost when the instance is stopped, terminated, or fails.                   |
+|                                   |                       | - Best suited for workloads requiring high-speed, temporary storage, such as buffer or cache data.                              |
 
 - Question 12
 Which of the following is best-suited for load-balancing HTTP and HTTPS traffic?
