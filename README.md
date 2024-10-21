@@ -17,7 +17,8 @@
 14. [Security & Compliance](#security--compliance)
 15. [Machine Learning](#machine-learning)
 16. [Account Management, Billing, & Support](#account-management-billing--support)
-17. [Other](#other)
+17. [AWS Architecting](#AWS-Architecting)
+18. [Other](#other)
 
 
 # cloud-computing
@@ -696,7 +697,7 @@ CloudWatch:
 | Subnets                    | Tied to an AZ, network partition of the VPC                                  |
 | Internet Gateway           | At the VPC level, provides Internet Access                                   |
 | NAT Gateway / Instances    | Provide internet access to private subnets                                   |
-| NACL                       | Stateless, subnet rules for inbound and outbound                             |
+| NACL                       | (Network Access Control Lis )Stateless, subnet rules for inbound and outbound|
 | Security Groups            | Stateful, operate at the EC2 instance level or ENI                           |
 | VPC Peering                | Connect two VPCs with non-overlapping IP ranges, non-transitive              |
 | Elastic IP                 | Fixed public IPv4, ongoing cost if not in use                                |
@@ -927,7 +928,8 @@ Correct answer
 [Back to the top](#table-of-contents)
 
 
-## other
+
+### AWS-Architecting
 
 # Well-Architected Framework: 6 Pillars 
 - (OPR + 2S + C)
@@ -971,6 +973,9 @@ Correct answer
 | **Proactive Guidance**                  | No                                  | No                                 | No                                   | Yes                                    |
 | **Training and API Support**            | No                                  | No                                 | Yes                                  | Yes                                    |
 | **Access to Enterprise Concierge**      | No                                  | No                                 | No                                   | Yes                                    |
+
+## other
+
 
 ![trust-advisor](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-trust-advisor.png)
 
