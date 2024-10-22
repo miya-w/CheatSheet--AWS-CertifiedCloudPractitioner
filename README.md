@@ -103,6 +103,13 @@ Cloud Computing can be broadly divided into three types:
 | EC2 Image Builder           | Automatically build, test, and distribute AMIs           |
 
 - you can buy Amazon Machine Images (AMIs) in the AWS Marketplace.
+### AWS Marketplace 
+* Digital catalog with thousands of software listings from independent software vendors (3rd party) 
+* Example: 
+   1.Custom AMI (custom OS, firewalls, technical solutions...) 
+   2.CloudFormation templates 
+   3.Software as a Service• Containers 
+
 
 [Back to the top](#table-of-contents)
 
@@ -706,6 +713,10 @@ CloudWatch:
 | VPC Flow Logs              | Network traffic logs                                                         |
 | Client VPN                 | OpenVPN connection from your computer into your VPC                          |
 
+- Security Groups deny all traffic by default. Only allow rules
+- A network ACL has separate inbound and outbound rules, and each rule can either allow or deny traffic.
+
+
 ### On-Premises Connection
 ![on-premises](https://github.com/miya-w/CheatSheet--AWS-CertifiedCloudPractitioner/blob/main/images/aws-vpc-on-premises.png)
 
@@ -718,6 +729,21 @@ CloudWatch:
 
 
 -  VPN stands for Virtual Private Network. It is a service that enables you to securely connect your on-premises network or a remote device (such as a laptop or mobile device) to your AWS Virtual Private Cloud (VPC) over an encrypted connection via the public internet.
+
+test-1-Question 4
+Which of the following statements are CORRECT regarding the AWS VPC service? (Select two)
+
+- A Security Group can have both allow and deny rules
+- A Network Address Translation gateway (NAT gateway) is managed by AWS
+- A Security Group can have allow rules only
+- A Network Address Translation instance (NAT instance) is managed by AWS
+- A network access control list (network ACL) can have allow rules only
+
+Answer: 
+- A Security Group can have allow rules only
+- A Network Address Translation gateway (NAT gateway) is managed by AWS
+
+
 
 - Question 44 
 A multi-national organization has a separate virtual private cloud (VPC) for each of its business units on the AWS Cloud. The organization also wants to connect its **on-premises** data center with the different virtual private clouds (VPC) for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
@@ -973,6 +999,11 @@ Correct answer
 | **Proactive Guidance**                  | No                                  | No                                 | No                                   | Yes                                    |
 | **Training and API Support**            | No                                  | No                                 | Yes                                  | Yes                                    |
 | **Access to Enterprise Concierge**      | No                                  | No                                 | No                                   | Yes                                    |
+
+- **Access to Cloud Support Engineers** in AWS refers to the ability to interact directly with AWS technical support personnel who are knowledgeable about AWS services. 
+- **AWS Architectural Guidance** : AWS Cloud Support Engineers provide recommendations and best practices for designing, building, and maintaining scalable, secure, reliable, and cost-effective applications in the AWS Cloud. oOffered under higher-tier AWS support plans (DEveloper[General Guidance] Business(Contextual Guidance and Enterprise[Consultative Review]))
+- **AWS Infrastructure Event Management (IEM)** : It provides a proactive planning and real-time operational support service for large-scale events such as product launches, migrations, or major promotions that require a reliable and scalable infrastructure.(Business[additional fee] or Enterprise Support plans)
+- **Technical Account Manager (TAM)**:a Technical Account Manager (TAM) is a valuable resource for enterprises using AWS, offering deep technical expertise, personalized support, and strategic guidance to optimize their cloud operations and infrastructure.(only for enterprise)
 
 ## other
 
