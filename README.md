@@ -792,6 +792,7 @@ A: AWS WAF
 
 ### Compare the GuardDuty, Inspector, Detective.
 
+
 | **AWS Service**       | **Primary Focus**                      | **Type of Service**                         | **Analyzes**                                        | **Detects**                                        | **Integrations**                         | **Output**                                      | **Ideal For**                                                             |
 |-----------------------|----------------------------------------|---------------------------------------------|-----------------------------------------------------|----------------------------------------------------|------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------|
 | **AWS GuardDuty**     | Threat detection and monitoring        | Continuous monitoring                       | CloudTrail logs, VPC flow logs, DNS logs             | Threats and suspicious activities                   | Security Hub, Lambda, EventBridge        | Threat findings with severity                   | Continuous threat detection and real-time monitoring                     |
@@ -834,6 +835,20 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
    5. Layer 5: Session Layer, 
    6. Layer 6: Presentation Layer, 
    7. Layer 7: Application Layer. 
+
+
+test-1-Question 27
+A company wants to have control over creating and using its own keys for encryption on AWS services. Which of the following can be used for this use-case?
+
+- AWS managed key
+- AWS owned key
+- AWS Secrets Manager
+- customer managed key (CMK)
+
+ans: customer managed key (CMK)
+
+
+
 # Machine Learning
 ### machine-learning
 
