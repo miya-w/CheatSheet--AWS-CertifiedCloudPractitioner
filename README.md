@@ -265,6 +265,9 @@ Which of the following is best-suited for load-balancing HTTP and HTTPS traffic?
 | S3 Glacier Flexible Retrieval                  | $0.0036                                                 | $0.01 - $0.03                         | Minutes to hours           |
 | S3 Glacier Deep Archive                        | $0.00099                                                | $0.02 (Bulk), $0.10 (Standard)         | Hours (up to 12 hours)     |
 
+("immediate" generally suggests quick but allows for a tiny delay, whereas "instant" means essentially no delay at all.)
+
+
 Question 10
 
 A photo sharing web application wants to store thumbnails of user-uploaded images on Amazon Simple Storage Service (Amazon S3). The thumbnails are rarely used but need to be immediately accessible from the web application. The thumbnails can be regenerated easily if they are lost. Which is the most cost-effective way to store these thumbnails on Amazon Simple Storage Service (Amazon S3)?
