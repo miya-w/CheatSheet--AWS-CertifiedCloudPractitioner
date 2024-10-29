@@ -414,6 +414,16 @@ AWS Lambda pricing is based on which of the following criteria? (Select two)
 ** With AWS Lambda, you pay only for what you use. You are charged based on the number of requests for your functions and the duration, the time it takes for your code to execute.** 
 
 
+- test-2-Question 44
+Which of the following statements are true about AWS Lambda? (Select two)
+- AWS Lambda provides access to the underlying operating system to control its behavior through code
+- AWS Lambda lets you run code without provisioning or managing servers
+- AWS Lambda allows you to orchestrate and manage Docker containers to facilitate complex containerized applications on AWS
+- You pay for the compute time you consume for AWS Lambda
+
+Answeer:
+- AWS Lambda lets you run code without provisioning or managing servers
+- You pay for the compute time you consume for AWS Lambda
 
 
 [Back to the top](#table-of-contents)
@@ -646,6 +656,17 @@ Australia (Sydney) Region has Availability Zones: 3, Launched 2012
 Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
 
 - [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/?p=ngi&loc=2)
+
+Question 15
+A gaming company is looking at a technology/service that can deliver a consistent low-latency gameplay to ensure a great user experience for end-users in various locations.
+Which AWS technology/service will provide the necessary low-latency access to the end-users?
+
+- AWS Wavelength
+- AWS Local Zones
+- AWS Edge Locations
+- AWS Direct Connect
+
+Answer: AWS Local Zones
 
 
 [Back to the top](#table-of-contents)
