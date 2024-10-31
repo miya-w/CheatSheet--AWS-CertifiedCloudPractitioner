@@ -314,11 +314,15 @@ edge, and migrate data into and out of AWS
 
 - Online Analytical Processing (OLAP) involve querying and analyzing large datasets, often for business intelligence (BI), reporting, and data analytics.
 
+### NoSQL database: DynamoDB &  DocumentDB  
 
 | Feature                     | Description                                                                                                           |
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| DynamoDB                    | - Low Latency Retrieval: Optimized for high-performance data access. <br> - High Availability: Replicates across three AZs in a region. <br> - Auto Scaling: Automatically adjusts capacity based on traffic. <br> - DynamoDB Accelerator (DAX): In-memory caching for faster read response times. <br> - Global Tables: Multi-region accessibility with low latency. <br> - Active-Active Replication: Allows read/write in any AWS region. |
+| DynamoDB                    | - Low Latency Retrieval: Optimized for high-performance data access. <br> - **High Availability**: Replicates across three AZs in a region. <br> - **Auto Scaling**: Automatically adjusts capacity based on traffic. <br> - **DynamoDB Accelerator (DAX)**: In-memory caching for faster read response times. <br> - Global Tables: Multi-region accessibility with low latency. <br> - **Active-Active Replication: Allows read/write** in any AWS region. |
 
+| Feature      | Description                                                                                                                      |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------|
+| DocumentDB   | - Database for MongoDB: Managed document database compatible with MongoDB. <br> - JSON - NoSQL Database: Stores data in JSON-like format for flexible schema design.(like Aurora for RD) |
 
 
 
