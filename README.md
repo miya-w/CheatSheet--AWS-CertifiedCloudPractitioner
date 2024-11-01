@@ -701,7 +701,7 @@ Answer: AWS Local Zones
 
 | Service                     | Description                                                                                                              |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| CloudWatch                  | Metrics: Monitor the **performance of AWS services** and **billing metrics**. Alarms: Automate notification, perform EC2 action, notify to SNS based on metric. Logs: Collect log files from EC2 instances, servers, Lambda functions... Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule. |
+| CloudWatch                  | Metrics: Monitor the **performance of AWS services** and **billing metrics**.<br> Alarms: Automate notification, perform EC2 action, notify to SNS based on metric.<br> Logs: Collect log files from EC2 instances, servers, Lambda functions...<br> Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule.<br> |
 | CloudTrail                  | Audit **API calls**, **logging** made within your AWS account. CloudTrail Insights: Automated analysis of your CloudTrail Events. It captures information about the who, when, and what of actions performed on AWS services.          |
 | X-Ray                       | Trace requests made through your distributed applications.                                                                |
 | AWS Health Dashboard        | Status of all AWS services across all regions.                                                                            |
@@ -728,7 +728,22 @@ CloudWatch:
 - Alerting: Set up alarms based on thresholds (e.g., CPU utilization above 80%) to notify you or trigger automated responses like scaling or restarting an instance.
 - Log Analysis: Collect and analyze log files from applications, infrastructure, or AWS services like Lambda, API Gateway, or EC2.
 
+test-4-Question 61
+Which AWS service can be used to set up billing alarms to monitor estimated charges on your AWS account?
+- AWS Cost Explorer
+- AWS CloudTrail
+- AWS Organizations
+- Amazon CloudWatch
+
+Ans: Amazon CloudWatch
+Amazon **CloudWatch allows you to create billing alarms based on estimated charges**, helping you monitor your AWS usage costs. By setting up a billing alarm, you can receive notifications when your estimated charges exceed a specified threshold.
+Other services listed, like AWS Cost Explorer, help with cost analysis, but only CloudWatch provides the billing alarm functionality.
+
+
 [Back to the top](#table-of-contents)
+
+
+
 
 # Amazon VPC
 ### amazon-vpc
