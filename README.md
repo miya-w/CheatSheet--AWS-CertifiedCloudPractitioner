@@ -701,7 +701,7 @@ Answer: AWS Local Zones
 
 | Service                     | Description                                                                                                              |
 |-----------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| CloudWatch                  | Metrics: Monitor the **performance of AWS services** and **billing metrics**.<br> Alarms: Automate notification, perform EC2 action, notify to SNS based on metric.<br> Logs: Collect log files from EC2 instances, servers, Lambda functions...<br> Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule.<br> |
+| CloudWatch                  | - Metrics: Monitor the **performance of AWS services** and **billing metrics**.<br> - Alarms: Automate notification, perform EC2 action, notify to SNS based on metric.<br> - Logs: Collect log files from EC2 instances, servers, Lambda functions...<br> - Events (or EventBridge): React to events in AWS, or trigger a rule on a schedule.<br> |
 | CloudTrail                  | Audit **API calls**, **logging** made within your AWS account. CloudTrail Insights: Automated analysis of your CloudTrail Events. It captures information about the who, when, and what of actions performed on AWS services.          |
 | X-Ray                       | Trace requests made through your distributed applications.                                                                |
 | AWS Health Dashboard        | Status of all AWS services across all regions.                                                                            |
