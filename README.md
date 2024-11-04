@@ -667,6 +667,17 @@ Australia has two Regions : Sydney and Melbourne
 Australia (Sydney) Region has Availability Zones: 3, Launched 2012
 Australia (Melbourne) Region has Availability Zones: 3, Launched 2023
 
+test-4-Question 31
+Which of the following describes an Availability Zone (AZ) in the AWS Cloud?
+
+- One or more server racks in the same location
+- One or more data centers in the same location
+- One or more data centers in multiple locations
+- One or more server racks in multiple locations
+
+
+Correct option: One or more data centers in the same location
+
 - [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/?p=ngi&loc=2)
 
 Question 15
