@@ -257,16 +257,32 @@ Which of the following is best-suited for load-balancing HTTP and HTTPS traffic?
 | **Storage Class**                               | **Storage Cost (per GB/month)**                           | **Retrieval Cost (per GB)**            | **Retrieval Speed**         |
 |------------------------------------------------|---------------------------------------------------------|---------------------------------------|----------------------------|
 | S3 Standard                                    | $0.023 (first 50 TB), $0.022 (next 450 TB), $0.021 (over 500 TB) | Free                                  | Immediate                  |
-| S3 Intelligent-Tiering (Frequent Access)       | $0.023                                                  | Varies                                | Immediate or standard      |
-| S3 Intelligent-Tiering (Infrequent Access)     | $0.0125                                                 | Varies                                | Immediate or standard      |
+| S3 Intelligent-Tiering (Frequent Access)       | $0.023                                              | Varies(Free)                               | Immediate or standard      |
+| S3 Intelligent-Tiering (Infrequent Access)     | $0.0125                                             | Varies(free)                                | Immediate or standard      |
 | S3 Standard-IA                                 | $0.0125                                                 | $0.01                                 | Immediate                  |
 | S3 One Zone-IA                                 | $0.01                                                   | $0.01                                 | Immediate                  |
 | S3 Glacier Instant Retrieval                   | $0.004                                                  | $0.03                                 | Instant                    |
 | S3 Glacier Flexible Retrieval                  | $0.0036                                                 | $0.01 - $0.03                         | Minutes to hours           |
 | S3 Glacier Deep Archive                        | $0.00099                                                | $0.02 (Bulk), $0.10 (Standard)         | Hours (up to 12 hours)     |
 
-("immediate" generally suggests quick but allows for a tiny delay, whereas "instant" means essentially no delay at all.)
 
+- In the Amazon S3 Intelligent-Tiering storage class, there are no data retrieval fees for accessing objects stored in the Frequent Access tier. This means you can retrieve your data from this tier without incurring additional costs beyond the standard storage charges. 
+- ("immediate" generally suggests quick but allows for a tiny delay, whereas "instant" means essentially no delay at all.)
+
+
+test-4-Question 30
+
+Which of the following Amazon Simple Storage Service (Amazon S3) storage classes do not charge any data retrieval fee? (Select two)
+
+- Amazon S3 Standard
+- Amazon S3 Glacier Flexible Retrieval
+- Amazon S3 Intelligent-Tiering
+- Amazon S3 Standard-Infrequent Access (S3 Standard-IA)
+- Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)
+
+Answer: These two storage classes do not charge any data retrieval fees:
+Amazon S3 Standard: This is the default storage class designed for frequently accessed data. There are no data retrieval fees for accessing data in this class.
+Amazon S3 Intelligent-Tiering: This storage class automatically moves data between two access tiers (frequent and infrequent) based on access patterns. There are no retrieval fees when accessing data in either tier.
 
 Question 10
 
