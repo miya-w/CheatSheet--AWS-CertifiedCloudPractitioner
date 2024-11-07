@@ -296,6 +296,15 @@ A photo sharing web application wants to store thumbnails of user-uploaded image
 Correct answer
 Use Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) to store the thumbnails
 
+test-4-Question 19
+Which of the following Amazon Simple Storage Service (Amazon S3) storage classes has NO constraint of a minimum storage duration charge for objects?
+
+- Amazon S3 Standard-Infrequent Access (S3 Standard-IA)
+- Amazon S3 Glacier Flexible Retrieval
+- Amazon S3 Standard
+- Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)
+
+Answer: Amazon S3 Standard-Infrequent Access (S3 Standard-IA)
 
 [Back to the top](#table-of-contents)
 
