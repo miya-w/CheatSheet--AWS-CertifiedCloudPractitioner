@@ -79,6 +79,11 @@ Cloud Computing can be broadly divided into three types:
 | EC2 Instance Connect     | Connect to your EC2 instance within your browser (Mac, Linux, Windows)    |
 | PuTTY                   | Use PuTTY (a free SSH client) to securely connect to your EC2 instance on Windows, using the private key (port 22)(Windows only) |
 
+Which credential components are required to gain programmatic access to an AWS account? 
+
+- An access Key ID
+- A secret access key
+
 
 
 ### EC2 Instance Storage – Summary  
