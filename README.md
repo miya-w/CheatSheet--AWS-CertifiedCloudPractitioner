@@ -71,8 +71,6 @@ Cloud Computing can be broadly divided into three types:
 | EC2 User Data                                              | Script launched at the first start of an instance                  |
 | EC2 Instance Role                                          | Link to IAM roles                                                  |
 | Purchasing Options                                         | On-Demand, Spot, Reserved (Standard + Convertible), Dedicated Host, Dedicated Instance |
-
-### Communicate with EC2
 ### Communicate with EC2
 
 | Method                  | Description                                           |
@@ -96,6 +94,9 @@ Cloud Computing can be broadly divided into three types:
 | EFS-IA                                                     | Cost-optimized storage class for infrequently accessed files       |
 | FSx for Windows                                            | Network File System for Windows servers                            |
 | FSx for Lustre                                             | High Performance Computing Linux file system                       |
+
+-  Amazon EFS (Elastic File System) can be attached to different Availability Zones (AZs) within the same AWS Region.
+
 
 ### AMI
 | AMI (Amazon Machine Image) | Create ready-to-use EC2 instances with our customizations |
