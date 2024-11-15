@@ -1127,8 +1127,9 @@ Correct answer
 
 [Back to the top](#table-of-contents)
 
-Resources
+### Resources
 ---
+
 - [udemy - Ultimate AWS Certified Cloud Practitioner CLF-C02](https://www.udemy.com/course/aws-certified-cloud-practitioner-new/?couponCode=KEEPLEARNING)
 - [大話AWS雲端架構：雲端應用架構圖解輕鬆學](https://readmoo.com/book/210259735000101)
 - [Intro to AWS - The Most Important Services To Learn](https://www.youtube.com/watch?v=FDEpdNdFglI&list=WL&index=14&t=393s)
